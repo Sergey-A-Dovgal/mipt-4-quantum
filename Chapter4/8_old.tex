@@ -1,0 +1,230 @@
+\chapter{Одномерное движение}
+Будем отталкиваться от одномерного уравнения Шрёдингера
+$$
+    i \hbar \ud{}{t} \qu{\psi(t)} = \hat H \qu{\psi(t)} \eqno{(\ast)}
+$$ 
+Гамильтониан определяется из принципа соответствия
+\section{Линейный гармонический осциллятор}
+Будем решать $(\ast)$ в абстрактном гильбертовом пространстве, без конкретного представления.
+
+\textbf{Задача:} найти собственные функции оператора $\hat H$,
+\begin{eqnarray*}
+    \Hat H &=& \dfrac{\Hat p^2}{2m} + \dfrac{m \omega^2 \Hat x^2}{2}\\\index{Оператор! гамильтониан}
+    \Hat H \qu{\psi_E} &=& E \qu{\psi_E}
+\end{eqnarray*}
+\subsection{Обезразмеривание}
+Уравнение приводится к виду
+$$
+    \dfrac{\Hat H}{\hbar \omega} = \dfrac{1}{2} \left( \Hat P^2 + \Hat X^2 \right),
+$$
+где
+$$
+    \Hat P = \dfrac{\Hat p}{p_0}, \qquad \Hat X = \dfrac{\Hat x}{x_0},
+$$
+$$
+    x_0 = \sqrt{\dfrac{\hbar}{m\omega}}, \qquad p_0 = \sqrt{\hbar m \omega}
+$$
+$x_0$, $p_0$~--- осцилляторные единицы координаты и импульса.\index{Осцилляторная единица! координаты}\index{Осцилляторная единица! импульса}
+
+Новое значение коммутатора имеет вид:
+$$
+    [\Hat X, \Hat P] = i \hbar \dfrac{1}{\hbar} \Hat 1 = i
+$$
+\subsection{<<Разложение на множители>>}
+Обозначим
+$$
+    \begin{cases}
+        \Hat a = \dfrac{1}{\sqrt{2}} \left(\Hat X + i \Hat P \right)\\
+        \Hat a^+ = \dfrac{1}{\sqrt{2}} \left(\Hat X - i \Hat P \right)        
+    \end{cases}
+$$\index{Оператор! рождения частиц}\index{Оператор! уничтожения частиц}
+Эти операторы всего лишь сопряжены друг другу\wikiq{Почему?}, они не являются эрмитовыми или унитарными.
+\begin{eqnarray*}
+    \Hat a^+ \Hat a &=& \dfrac12 (\Hat X - i \Hat P)(\Hat X + i \Hat P)\\
+                    &=& \dfrac12 (\Hat X^2 + \Hat P^2 - i[\Hat P, \Hat X])\\
+                    &=& \dfrac{\Hat H}{\hbar \omega} - \dfrac12 \hat 1
+\end{eqnarray*}
+Окончательное выражение для гамильтониана\footnote{единичный оператор обычно опускают}:
+$$
+    \underline{\hat H = \hbar \omega (\Hat a^+ \Hat a + \dfrac12)}
+$$\index{Оператор! гамильтониан}
+\subsection{Алгебра операторов $\Hat a^+$, $\Hat a$, и функций от них}
+$$
+    \Hat N \eqdef \Hat a^+ \Hat a
+$$\index{Оператор! числа частиц}
+\Lem $[\Hat a, \Hat a^+] = \Hat 1$
+
+\Proof
+\begin{eqnarray*}
+    [\hat a, \hat a^+] &=& \dfrac12 [\Hat X + i \Hat P, \Hat X - i \hat P]\\
+                        &=& \dfrac12 (-i [\Hat X, \Hat P] + i [\Hat P, \Hat X]) = \Hat 1
+\end{eqnarray*}
+Оператор
+$$
+    \hat N = \Hat a^+ \Hat a
+$$
+является эрмитовым, и его собственные векторы~--- собственные векторы гамильтониана (он \emph{линейно связан} с гамильтонианом)
+$$
+\begin{cases}
+    [\Hat N, \Hat a] = [\Hat a^+ \Hat a, \Hat a] = [\Hat a^+, \Hat a]\Hat a = -\Hat a,\\
+    [\Hat N, \Hat a^+] = \Hat a^+
+\end{cases}
+$$
+\subsection[Собственные векторы и значения $\Hat H, \Hat N$]{Собственные векторы и значения гамильтониана (оператора $\Hat N$)} 
+\begin{enumerate}
+  \item Предполагаем, что найдётся хотя бы одно решение уравнения
+  $$
+    \Hat N \qu{\lam} = \lam \qu{\lam}, \qquad \qu{\lam} \in \H,
+  $$
+  причём $\qs{\lam}{\lam} = 1$, то есть $\qu{\lam}$ лежит в дискретном спектре.\index{Спектр! дискретный}
+  \item
+  \begin{eqnarray*}
+    \Hat N \Hat a^+ \qu{\lam} &=& (\Hat a^+ \Hat N + [\Hat N, \, \hat a^+]) \qu{\lam}\\
+    &=& (\Hat a^+ \Hat N + \Hat a^+ ) \qu \lam \\
+    &=& (\lam+1) \Hat a^+ \qu \lam
+  \end{eqnarray*}
+  Если предположить, что у оператора $\Hat N$ существует хотя бы один собственный вектор, то действие на собственный вектор оператора $\Hat a^+$ даёт собственный вектор для собственного значения $(\lam + 1)$.
+  \item Аналогично,
+  $$
+    \Hat N \Hat a \qu \lam = (\lam - 1) \Hat a \qu \lam
+  $$
+\end{enumerate}
+\textbf{Вывод:}
+Действуя операторами $\Hat a$, $\Hat a^+$ на какой-нибудь собственный вектор $\qu \lam$, можно построить цепочку собственных векторов с собственными значениями $\lam \pm 1, \lam \pm 2, \ldots$
+$$
+    \begin{cases}
+        \Hat a^+ \qu \lam = C \qu{\lam + 1}\\
+        \Hat a \qu \lam = D \qu{\lam - 1}
+    \end{cases}
+$$
+$\Hat a^+, \hat a$~--- <<лестничные>> операторы.\index{Оператор! лестничный}
+\subsection{Лестничные операторы}
+%Для множества собственных значений $\lam$ могут выполняться две возможности:
+%\begin{enumerate}
+%  \item Пусть $\lam$~--- любое вещественное. Тогда $\lam \geqslant 0$ или $\lam < 0$
+%  \item 
+%\end{enumerate}
+Покажем, что спектр собственных значений $\Hat N$ ограничен снизу.
+$$
+    \lam = \qtri{\lam}{\Hat N}{\lam} = \qtri{\lam}{\hat a^+ \hat a}{\lam} = \big\| \hat a \qu \lam  \big\|^2 \geqslant 0
+$$
+\textbf{Утверждение:} должен быть собственный вектор, отвечающий собственному значению 0.\wikiq{Почему?}
+$$
+    \hat a \qu 0 = 0
+$$
+Если бы было дробное собственное значение $\lam'$, то они бы порождало цепочку $\lam' \pm 1, \ldots$, получили бы спектр, не ограниченный снизу. Этого быть не может.
+
+Таким образом, собственные значения имеют вид $n = 0, 1, 2, \ldots$,
+$$
+    E_n = \hbar \omega \left( n + \dfrac12 \right)
+$$
+Других собственных значений нет.
+
+\textbf{Интерпретация:}
+\begin{enumerate}
+  \item Традиционный подход.
+  
+  $\Hat H$ описывает систему с одной частицей,
+  $$
+    \Hat H = \dfrac{\Hat p^2}{2m} + \dfrac{m \omega^2 \Hat x^2}{2}
+  $$\index{Оператор! гамильтониан}
+  При этом $\qu 0$~--- основное состояние\index{Состояние! основное}, $E_0 = \dfrac{\hbar \omega}{2}$
+  \item Другой подход.
+  $$
+    \Hat H = \hbar \omega (\Hat a^+ \Hat a + \dfrac12)
+  $$
+  Система из $n$ тождественных неотличимых частиц. $n$~--- собственное значение.
+  
+  \begin{itemize}
+    \item $\Hat N$~--- оператор числа частиц.\index{Оператор! числа частиц} $n$~--- его собственное значение~--- число частиц.
+    \item $\qu 0$~--- основное состояние без частиц (вакуум)\index{Состояние! вакуум}
+    \item $\qu n$~--- состояние с $n$ частицами (возбуждённое)\index{Состояние! вобужденное}
+  \end{itemize}
+  Эти частицы называют \emph{квантами}, или \emph{квазичастицами}\index{Квант}\index{Квазичастица} (пример\footnote{род частиц зависит от значения $\omega$}: фотоны, фононы).
+  \begin{itemize}
+    \item $\Hat a^+$~--- оператор рождения частиц\index{Оператор! рождения частиц}
+    \item $\Hat a$~--- оператор уничтожения частиц\index{Оператор! уничтожения частиц}
+  \end{itemize}
+\end{enumerate}
+$$
+    \begin{cases}
+        \Hat a^+ \qu n = C \qu{n+1},\\
+        \Hat a \qu n = D \qu{n-1}
+    \end{cases}
+$$
+Наша задача~--- найти $C$, $D$.
+$$
+    \begin{cases}
+        \Hat a^+ \qu n = C \qu{n+1}\\
+        \uq{n} \Hat a = C^\ast \uq{n+1}
+    \end{cases}
+$$
+$$
+    \qtri{n}{\Hat a \Hat a^+}{n} = |C|^2 \qs{n+1}{n+1} = |C|^2
+$$
+$$
+    \qtri{n}{\hat a^+ \hat a + \hat 1}{n} = \qtri{n}{\Hat + \hat 1}{n} = n+1
+$$
+С точностью до общей фазы (в любом случае, мы её не можем наблюдать),
+$$
+\underline{    C = \sqrt{n+1}}
+$$
+Отсюда получаем:
+$$
+    \begin{cases}
+        \hat a^+ \qu n = \sqrt{n+1} \qu{n+1}\\
+        \hat a \qu{n} = \sqrt{n} \qu{n-1}
+    \end{cases}
+$$
+\Quest{Как получить $\qu n$?}
+
+\Ans Найдём $\qu 0$, затем
+\begin{eqnarray*}
+    \qu 1 &=& \dfrac{\Hat a^+}{\sqrt{1!}} \qu 0\\
+    \qu 2 &=& \dfrac{\big(\Hat a^+\big)^2}{\sqrt{2!}} \qu 0\\
+    && \cdots\\
+    \qu n &=& \dfrac{\big(\Hat a^+\big)^n}{\sqrt{n!}} \qu 0\\
+\end{eqnarray*}
+\Exercise Проверить, что $\qs{n}{n'} = \dta_{nn'}$
+\subsection{Замечания математического характера}
+\begin{itemize}
+  \item Можно доказать, что $\Hat N$ образует сам по себе полный набор\index{Полный набор} совместных наблюдаемых, то есть его собственные значения однозначно характеризует собственные векторы.
+      
+      Это означает, что не требуется дополнительных операторов для  различения собственных векторов, с оператором $\Hat N$ коммутируют только $f(\Hat N)$:
+      $$
+        [\Hat A, \Hat N] = 0 \LRA \Hat A = f(\Hat N)      $$
+  \item Система собственных векторов $\Hat N$ $\big\{ \qu n \big\}$ полна.
+\end{itemize}
+\subsection{Координатное представление}
+\index{Представление! координатное}
+$$
+    \qs{\xi}{n} = \qs{\frac{x}{x_0}}{n} = \psi_n (\xi)
+$$
+Сопоставим:
+$$
+    \begin{cases}
+        \Hat a \to \dfrac{1}{\sqrt{2}} \left( \xi + \ud{}{\xi} \right)\\
+        \Hat a^+ \to \dfrac{1}{\sqrt{2}} \left( \xi - \ud{}{\xi} \right)
+    \end{cases}
+$$
+Подставляя $\Hat a \qu 0 = 0$, получаем:
+$$
+    \psi_0(\xi) = \left( \xi + \ud{}{\xi} \right) \qs{\xi}{0} = 0
+$$
+$$
+    \dfrac{d \qs{\xi}{0}}{\qs{\xi}{0}} = -\xi d \xi
+$$
+Основное состояние:
+$$
+    \qs{\xi}{0} = c_0 e^{-\nicefrac{\xi^2}{2}}
+$$
+В координатном представлении:
+\begin{eqnarray*}
+    \qs{\xi}{n} = \psi_n(\xi) &=& \dfrac{1}{2^n n!} \left( \xi - \ud{}{\xi} \right)^n \dfrac{1}{\sqrt[4]{\pi}} e^{-\nicefrac{\xi^2}{2}}\\
+                              &=& \dfrac{1}{2^n n! \sqrt{\pi}} H_n(\xi)
+\end{eqnarray*}
+$H_n(\xi)$~--- полином Эрмита.\index{Полином Эрмита}
+$$
+    H_n(\xi) = (-1)^n e^{\xi^2} \dfrac{d^n}{d \xi^n} e^{-\xi^2}
+$$
+Система эрмитовых полиномов полна в $\mathcal{L}_2$

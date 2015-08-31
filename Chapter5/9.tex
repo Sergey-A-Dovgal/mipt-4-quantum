@@ -1,0 +1,346 @@
+\chapter{Теория углового момента}
+\section{Каноническое квантование}
+\index{Квантование!каноническое}
+Каноническое квантование~--- это квантование при помощи коммутационных соотношений
+\subsection{Коммутационные соотношения}
+\Reminder В классической механике есть \emph{орбитальный момент}, или \emph{момент количества движения}
+\index{Момент количества движения!квантовый}
+%\index{орбитальный момент}
+$$
+    \vec L = [\vec r \times \vec p] = (L_x, L_y, L_z)^\top
+$$
+\Quest{Как поставить этой величине в соответствие квантовый оператор?}
+Заметим, что:
+$$
+    \Pois{L_i}{L_j} = e_{ijk} L_k
+$$
+Имеется две возможности для применения принципа соответствия:
+\begin{enumerate}
+  \item Заменить $p_i, q_j$ на соответствующие им квантовые операторы $\Hat p_i, \Hat q_j$
+  \item Заменить классические скобки Пуассона на квантовые.
+\end{enumerate}
+
+При втором подходе оказывается возможным описать вектор $\Hat{\vec S}$~--- \emph{спиновый, или собственный момент}, для которого нет классического аналога.
+
+Под угловым моментом понимается более общее понятие (в частном случае он может являться как спиновым, так и орбитальным)
+
+\Def
+\newcommand{\hvec}[1]{\hat{\vec #1}}
+$$
+    \hvec J = \{\Hat J_x, \Hat J_y, \Hat J_z\}
+$$
+является оператором углового момента, если выполняется 2 условия:
+\begin{enumerate}
+  \item Все компоненты являются \emph{наблюдаемыми}
+  \item Для них выполняется классическое коммутационное соотношение
+  $$
+\underline{    [\Hat J_i, \, \Hat J_j] = i \hbar e_{ijk} \Hat J_k}
+  $$
+\end{enumerate}
+\Rem В квантовой механике мы не имеем возможности измерить две координаты углового момента, ибо они попарно не коммутируют.
+
+%make table of definitions
+
+\textbf{Обозначения:}
+\begin{enumerate}
+  \item
+  $$
+    \hvec J = \hbar \hvec j
+  $$
+  $$
+    [\hat j_i, \, \hat j_j] = i e_{ijk} \Hat j_k
+  $$
+  \item Оператор квадратного углового момента
+  $$
+    {\hvec j}^2 = \hat j_x^2 + \hat j_y^2 + \hat j_z^2
+  $$
+  $$
+    [\hvec j^2, \, \Hat j_\ell] = 0, \quad \forall \ell = 1, 2, 3
+  $$
+  \item
+  $$
+    \Hat j_\pm = \Hat j_x \pm i \Hat j_y
+  $$
+  $$
+    [\Hat j_z, \, \Hat j_\pm] = \pm \Hat j_\pm
+  $$
+  Они не являются эрмитовыми. Роль этих операторов напоминает роль операторов $\Hat a, \Hat a^+$ в одномерном движении.
+\end{enumerate}
+\Cor $[\hvec j^2, \hat j_\pm] = 0$
+\subsection{TODO!!!}
+%\subsection{Спектр и общие собственные векторы оператора $\vec j^2$ и $j_z$}
+
+%here points begin
+\begin{enumerate}
+  \item Для дальнейшего исследования надо предположить, что имеется хотя бы один собственный вектор.
+$$
+    \begin{cases}
+        \hvec j^2 \qu{\lam, \mu} = \lam \qu{\lam, \mu},\\
+        \Hat j_z \qu{\lam, \mu} = \mu \qu{\lam, \mu}
+    \end{cases}
+$$
+Предполагаем, что векторы нормированы на 1:
+$$
+    \qs{\lam, \mu}{\lam, \mu} = 1
+$$
+
+  \item \begingroup %orbital operators
+\def \jpm {{\hat j}_\pm}
+\def \jx {\Hat j_x}
+\def \jy {\Hat j_y}
+\def \jz {\Hat j_z}
+\def \jsq {{\hvec j}^2}
+\def \qlm {\qu{\lam,\,\mu}}
+Поскольку оператор $\jpm$ коммутирует с оператором $\jsq$,
+$$
+    \jz \jpm \qlm = \big( \jpm \jz + \underbrace{[\jz,\, \jpm]}_{= \pm \jpm} \big) \qlm = (\mu \pm 1) \jpm \qlm
+$$
+Можно построить собственные векторы, отвечающие собственным значениям $\mu \pm 1$, и так далее.
+
+\textbf{Вывод:}
+$$
+    \jpm \qlm = N_\pm \qu{\lam, \, \mu \pm 1} \eqno (\ast)
+$$
+Хотим показать, что спектр оператора $\jz$ является ограниченным (см. главу 4)
+
+  \item %\subsection[Спектр проекции $\Hat{j_z}$]{Спектр оператора $\jz$}
+\def \lmu {\lam, \, \mu}
+\begin{eqnarray*}
+    \lam &=& \qtri{\lam,\mu}{\jsq}{\lam,\mu} \\
+    &=& \qtri{\lmu}{\Hat j_x^2 + \Hat j_y^2 + \Hat j_z^2}{\lmu}\\
+    &=& \qtri{\lmu}{\jx^+ \jx}{\lmu} + \qtri{\lmu}{\jy^+ \jy}{\lmu} + \qtri{\lmu}{\jz^+ \jz}{\lmu} \geqslant 0
+\end{eqnarray*}
+Каждое слагаемое может быть записано в виде квадрата нормы некоторого вектора.
+$$
+    \lam = \underbrace{\qtri{\lmu}{\jx^2}{\lmu} + \qtri{\lmu}{\jy^2}{\lmu}}_{\geqslant 0} + \mu^2 \geqslant 0
+$$
+Отсюда следует, что если при фиксированном $\lam$ число $\mu^2$ ограничено сверху.
+А это означает, что
+$$
+    \mu_{\min} \leqslant \mu \leqslant \mu_{\max}
+$$
+\begin{center}
+Обозначим $\mu_{\max} = j$
+\end{center}
+Должны выполняться два условия:
+\def \jp {\Hat j_+}
+\def \jm {\Hat j_-}
+$$
+    \begin{cases}
+        \jp \qu{\lam, j} = 0\\
+        \jm \qu{\lam, \mu_{\min}} = 0
+    \end{cases}
+$$
+Для того, чтобы реализовать эти условия, надо найти $N_\pm$. Воспользуемся $(\ast)$.
+
+  \item %\subsection{Оператор $N_\pm$}
+\def \jmp {\Hat j_\mp}
+\begin{eqnarray*}
+    N_\pm^2 &=& \qtri{\lmu}{\jpm^+ \jpm}{\lmu}\\
+    &=& \qtri{\lmu}{\jmp \jpm}{\lmu}\\
+    &=& \qtri{\lmu}{ (\jx \mp i \jy)(\jx \pm i \jy) }{\lmu}\\
+    &=& \qtri{\lmu}{ \jx^2 + \jy^2 \pm i [\jx, \jy] }{\lmu}\\
+    &=& \qtri{\lmu}{\jsq - \jz^2 \mp \jz}{\lmu}\\
+    &=& \lam - \mu^2 \mp \mu
+\end{eqnarray*}
+$$
+    \jpm \qlm = \sqrt{\lam - \mu^2 \mp \mu} \qu{\lam, \mu \pm 1}
+$$
+
+  \item %\subsection{}
+$$
+    \begin{cases}
+        \jp \qu{\lam, j} = 0\\
+        \jm \qu{\lam, \mu_{\min}} = 0
+    \end{cases}
+    \to
+    \begin{cases}
+        \lam - j^2 - j = 0\\
+        \lam - \mu_{\min}^2 + \mu_{\min} = 0
+    \end{cases}
+$$
+Приравняв $\lam$, получим уравнения, которые связывают $j$, $\mu_{\min}$:
+$$
+    j^2 + j = \mu_{\min}^2 - \mu_{\min}
+$$
+$$
+    (j + \mu_{\min})\underbrace{(j - \mu_{\min} + 1)}_{\neq 0} = 0
+$$
+Окончательно:
+$$
+\underline{    \mu_{\min} = -j}
+$$
+
+  \item %\subsection{}
+$$
+    \jsq \qlm = \lmu \qlm
+$$
+Воспользуемся тем, что
+$$
+    \jm \jp \qu{\lam, j} = 0
+$$
+$$
+    (\jsq - \jz^2 - \jz) \qu{\lam, j} = 0
+$$
+Откуда
+$$
+\underline{    \jsq \qu{\lam, j} = j(j+1) \qu{\lam, j}}
+$$
+Так как $\lam = j(j+1)$, то в векторе $\qlm$ составляющую $\lam$ не пишут.
+
+Но $\mu$ пробегает все значения от $-j$ до $+j$. Вся система общих собственных векторов может быть найдена из одного любого вектора с помощью наших операторов. Двигаясь с целым шагом, можно получать значения от $-j$ до $j$, откуда
+$$
+    2j = n \in \mathbb{Z} \RA j = 0, \dfrac12, 1, \dfrac32
+$$
+
+  \item %\subsection{}
+$$
+    \mu = m = -j, -j+1, \ldots, j
+$$
+Если $\mu$ полуцелое, то $j$ полуцелое. Если $\mu$ целое, то $j$ целое.
+$$
+    \begin{cases}
+        \jsq \qu{j, m} = j(j+1) \qu{j, m}\\
+        \jz \qu{j, m} = m \qu{j, m}
+    \end{cases}
+$$
+Для фиксированного числа $m$ (\emph{магнитного квантового числа}) число $j$ пробегает значения от (?)
+
+\Rem В этом пространстве размерности $2j+1$ все векторы линейно независимы. Если действовать на векторы этого пространства операторами $\jsq, \jx, \jy, \jz, \jpm$, мы не будем выходить за пределы этого пространства (то есть оно инвариантно). Несколько позже мы выясним, что пространство также инвариантно относительно вращений.
+
+$\jsq$, $\jz$ как правило не образуют полный набор.
+
+\textbf{Для всех этих операторов построим матричное представление:}
+$$
+\underline{    \jpm \qu{jm} = \sqrt{j(j+1) - m(m\pm 1)} \qu{j, m \pm 1}}, \qquad \qs{j_{m'}}{j_m} = \dta_{m'm}
+$$
+$$
+    \qtri{j_{m'}}{\jpm}{j_m} = \sqrt{j(j+1) - m(m\pm 1)} \dta_{m', \, m \pm 1}
+$$
+Берём полусумму и полуразность из формулы $\jpm = \jx \pm i \jy$
+\begin{itemize}
+  \item $
+    \qtri{j,m'}{\jx}{j,m} = \dfrac{1}{2} \sqrt{j(j+1) - m(m+1)} \dta_{m', m+1} +
+    \dfrac12 \sqrt{j(j+1) - m(m-1)} \dta_{m', m-1}
+$
+  \item $
+    \qtri{j,m'}{\jy}{j,m} = -\dfrac{i}{2} \sqrt{j(j+1) - m(m+1)} \dta_{m', m+1} +
+    \dfrac{i}{2} \sqrt{j(j+1) - m(m-1)} \dta_{m', m-1}
+$
+  \item $
+    \qtri{j,m'}{\jsq}{j,m} = j(j+1) \dta_{m'm}
+$
+  \item $
+    \qtri{j,m'}{\jz}{j,m} = m \dta_{m'm}
+$
+\end{itemize}
+\Quest{Как в этом представлении выглядит вектор состояния?}
+$$
+    \qs{j_{m'}}{j_m} = (\underbrace{1, 0, \ldots, 0}_{2j+1})^\top
+$$
+\endgroup
+
+\end{enumerate}
+
+\section{Орбитальный момент количества движения}
+\subsection{}
+Были написаны две возможности для того, чтобы реализовать принцип соответствия. Вернёмся к первому способу.
+Заменим $\vec p$, $\vec r$ не операторы.
+\begingroup
+\def \nla {\nabla}
+\def \hvr {\hat{\vec r}}
+\def \hvp {\hat{\vec p}}
+\def \hvL {\hat{\vec L}}
+    $$
+        \vec L = [\vec r \times \vec p] \to
+        \hvL = [\hvr \times \hvp ] \to
+        -i\hbar [\vec r \times \vec \nla], \quad \hvp = -i\hbar \vec \nla
+    $$
+Наиболее удобная для этих описаний система координат~--- сферическая.
+$$
+    \begin{cases}
+        x &= r \cos \phi \sin \theta \\
+        y &= r \sin \phi \sin \theta \\
+        z &= r \cos \phi
+    \end{cases}, \, where \,
+    \begin{cases}
+        0 &\leqslant \phi \leqslant 2\pi\\
+        0 &\leqslant \theta \leqslant \pi
+    \end{cases}
+$$
+$$
+    \Hat L_z \to -i\hbar [\vec r \times \vec \nla]_z = -i \hbar \left(
+        x \ud{}{y} - y \ud{}{x}
+    \right) = -i \hbar \ud{}{y}
+$$
+$$
+    \ud{}{\phi} = \ud{}{x} \ud{x}{\phi} + \ud{}{y} \ud{y}{\phi} + \ud{}{z} \ud{z}{\phi}
+$$
+Поставим вопрос о собственных функциях оператора $L_z$
+
+\subsection{}
+
+В дираковских обозначениях:
+$$
+    \qs{\phi}{m} = \Phi_m(\phi), \qquad -i \ud{}{\phi} = m \Phi_m(\phi)
+$$
+$$
+    \Phi_m(\phi) = C e^{i m\phi}
+$$
+\Quest{Чему равно $m$?}
+
+\Ans Нужно найти граничные условия, которые бы определяли значения этого числа. Ставится граничное циклическое условие:
+$$
+    \Phi_m(\phi + 2\pi) = \Phi_m(\phi)
+$$
+Циклическое условие означает \emph{однозначность} волновой функции при повороте на $2 \pi$.
+
+Система будет нормирована:
+$$
+    \int_0^{2\pi} \Phi_m^\ast (\phi) \Phi_{m'} (\phi) d \phi = \dta_{mm'}
+$$
+Отсюда
+$$
+    C = \dfrac{1}{\sqrt{2\pi}}
+$$
+
+На самом деле, целочисленное квантование появляется и без требования однозначности волновой функции (почему это требование есть? Ведь наблюдаем только квадрат волновой функции).
+
+В случае полуцелого квантования оператор $\hvL$ теряет свойство эрмитовости. В случае целочисленного квантования всё хорошо.
+
+\subsection{}
+$$
+    \hvL^2 = -\hbar^2 \left(
+        \dfrac{1}{\sin \theta} \ud{}{\theta} \big(
+            \sin \theta \ud{}{\theta}
+        \big) +
+        \dfrac{1}{\sin \theta} \left(\ud{}{\phi}\right)^2
+    \right) = -\hbar^2 \Delta_{\theta, \phi}
+$$
+$$
+    \Dta = \Dta_r + \dfrac{1}{r^2} \Dta_{\theta, \phi}
+$$
+\def \hvl {\Hat {\vec \ell}}
+\def \qlm {\qu{\ell, m}}
+\def \lz {\Hat{\ell_z}}
+$$
+    \begin{cases}
+        \hvl^2 \qlm  = \ell (\ell + 1) \qlm\\
+        \lz \qlm = m \qlm
+    \end{cases}
+$$
+%Решением этой системы являются сферические функции.
+%$$
+%    \begin{cases}
+%        -\Dta_{\theta, \phi} Y(\theta, \phi) = \ell (\ell + 1) Y(\theta, \phi)\\
+%        -i \ud{}{\phi} Y(\theta, \phi) = m Y(\theta, \phi)
+%    \end{cases}
+%$$
+%$$
+%    Y(\theta, \phi) = Y_\ell^{(m)} (\theta, \phi)
+%$$
+%$$
+%    Y_\ell^{(m)} (\theta, \ell) = C_\ell^{(m)} e^{i m\phi} P_\ell^{(m)} (\cos \theta), \quad \ell = 0, 1, 2, \ldots, \quad m = 0, \pm 1, \ldots, \pm \ell
+%$$
+\endgroup
+

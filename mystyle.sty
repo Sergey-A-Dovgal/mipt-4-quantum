@@ -1,0 +1,192 @@
+\ProvidesPackage{mystyle}
+
+\usepackage{amssymb,amsmath}
+\usepackage[cp1251]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{cmap}
+\usepackage{graphicx}
+\usepackage{units}
+
+\usepackage{fancyhdr}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancyhead[RO]{section: \bfseries \rightmark}
+\fancyhead[LE]{\bfseries \leftmark}
+\fancyhead[LO, RE]{}
+\fancyfoot[R]{subject: Квантовая Механика, 6-7 семестр}
+\fancyfoot[L]{page: \thepage}
+\fancyfoot[C]{}
+%\headrulewidth 0.4pt
+%\footrulewidth 0 pt
+
+\pagestyle{fancy}
+
+%\usepackage{hyperref}
+
+\renewcommand{\baselinestretch}{1.0}
+%\renewcommand{\thesection}{\arabic{section}}
+%\renewcommand{\thesubsection}{\arabic{subsection}}
+%\renewcommand{\thesubsection}{\textbf{\S \arabic{section} }}
+\renewcommand\normalsize{\sloppypar}
+
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{-0.3in}
+\setlength{\evensidemargin}{-0.3in}
+\setlength{\textwidth}{7in}
+%Найти теги, которые отвечают за размер колонтитулов и разрешают переносы строки
+
+\def \vs    {\vspace {20pt}}
+\def \LRA   {\quad \Leftrightarrow \quad}
+\def \sLRA  {\Leftrightarrow}
+\def \sRA   {\Rightarrow}
+\def \RA    {\quad \Rightarrow \quad}
+\def \LA    {\quad \Leftarrow \quad}
+\def \C    {\mathbb {C}}
+\def \H    {\mathcal {H}}
+\def \R    {\mathbb {R}}
+\def \N    {\mathbb {N}}
+\def \P    {\mathcal {P}}
+\def \Q    {\mathbb {Q}}
+\def \Z    {\mathbb {Z}}
+\def \eqdef {\,\overset{def}{=}\,}
+\def \defdef {\,\overset{def}{\Leftrightarrow}\,}
+\def \I     {\displaystyle\int\limits}
+\def \Rg	{\mathrm{Rg}\,}
+\def \F   {\mathcal{F}}
+
+\def \Re    {\mathrm {Re} \, }
+\def \Im    {\mathrm {Im} \, }
+\def \tg	{\mathrm{tg}\;}
+\def \vm    {{\vec{\vphantom{b} \mu}}}
+\def \va    {{\vec{\vphantom{b} a}}}
+\def \vphi    {{\varphi}}
+\def \mn {m\times n}
+\def \ophi {\phi}
+\def \phi {\varphi}
+
+\def \advanced {$^\ast$}
+
+\def \such  { \colon }
+\def \K     {\mathcal{K}}
+
+\def \Lap   {\underset{\mathcal{L}}{\longrightarrow}}
+\def \D     {\mathcal{D}}
+\def \L     {\mathcal{L}}
+\def \lda   {\lambda}
+\def \tr    {\mathrm{tr}}
+\def \Coeff    {\mathrm{Coeff \, }}
+\def \div    {\mathrm{div \, }}
+\def\nla{\nabla}
+
+\renewcommand{\vec}[1]{\overset{\to}{#1}}
+
+%% Laplas transformation
+
+\def \i     { ({\em i}) }
+\def \ii    { ({\em ii}) }
+
+\def \bra {|}
+\def \ket {\rangle}
+
+\let \eps   \varepsilon
+\let \dta   \delta
+\let \Dta   \Delta
+\let \any   \forall
+\let \gma   \gamma
+\let \lam   \lambda
+\let \ex    \exists
+\let \pa	  \partial
+\let \lra   \leftrightarrow
+
+%\newcommand {\Task}   [1] {\par \vspace {12pt} \textbf {Задача #1} \par}
+\newcommand {\Picture}[1] {   \centerline{\includegraphics[width = 0.6\textwidth]{pic/#1.png}} }
+
+%\newtheorem {Lem}{Лемма}
+\newtheorem {Theorem}{Теорема}
+\newtheorem {Corollary}{Следствие}
+\newtheorem {Rk}{Замечание}
+%\newtheorem {Proof}{Доказательство}
+\renewcommand \theCorollary {\normalfont}
+%\renewcommand \theProof {\normalfont}
+\newcommand {\Th}[0]        {\textbf{Теорема.} }
+\newcommand {\col}[3]       { \left(\begin{array}{c} #1 \\ #2 \\ #3\end{array}\right) }
+\newcommand {\Rem}[0]       {\textbf{Замечание.} }
+\newcommand {\Proof}[0]     {\textbf{Доказательство.} \nopagebreak }
+%\newcommand {\Pic}[1]       {\par\centerline{[ Тут будет рисунок ] }\par }
+\newcommand {\PicStub}[1]   {\par\vspace{3.2cm}\centerline{[ Тут нет рисунка, нарисуйте его сами ] }\par }
+\newcommand {\Pic}[1]       { \par\centerline{\includegraphics[height = 0.24\textheight]{#1}}\par }
+\newcommand {\Picw}[2]      { \par\centerline{\includegraphics[height = #2\textwidth]{#1}}\par }
+\newcommand {\Def}[0]       {\textbf{Определение.} }
+\newcommand {\Task}[0]      {\textbf{Задача. }}
+\newcommand {\Lem}[0]	      {\textbf{Лемма. }}
+\newcommand {\Quest}[1]     {\textbf{Вопрос. #1}\par}
+\newcommand {\Ans}          {\textbf{Ответ. }}
+\newcommand {\Lyrdig}       {\textbf{Лирическое отступление: }}
+\newcommand {\Reminder}     {\textbf{Напоминание. }}
+\newcommand {\Sol}          {\textbf{Решение. }}
+\newcommand {\Excse}        {\textbf{Упражнение. }}
+\newcommand {\Example}      {\textbf{Пример. }}
+\newcommand {\Cor}	        {\textbf{Следствие. }}
+\newcommand {\Assume}	      {\textbf{Предположение. }}
+\newcommand {\Stat}	        {\textbf{Утверждение. }}
+\newcommand {\Ex}	          {\textbf{Упражнение, }}
+\newcommand {\Exercise}	    {\textbf{Упражнение. }}
+\newcommand \mmax[1]        {\underset{#1}{max}}
+\newcommand {\cont}         {\ непрерывно}
+\newcommand {\diff}         {\ дифференцируема}
+\newcommand {\cdif}         {\cont \diff}
+\newcommand {\defn}         {\ определена\ }
+\newcommand {\comment}[1]   { }
+\newcommand {\point}[1]     {\textbf{#1. } }
+\newcommand {\condition}[1] {\big\{ #1 \big\}}
+\newcommand {\cond}[1]      {\Big\{ #1 \Big\}}
+\newcommand {\pair}[2]      {\left\|\begin{array}{c}#1\\#2\end{array} \right\|}
+\newcommand {\stolb}[2]		  {\left(\begin{array}{c} #1 \\ #2\end{array}\right)}
+\newcommand {\stolbtwo}[2]  {\pair{#1}{#2}}
+\newcommand {\br}[1]        {\Big[ #1 \Big]}
+\newcommand {\ud}[2]	      {\dfrac{\partial #1}{\partial #2}} %partial derivative
+\newcommand {\qu}[1]        {\bra #1 \ket} % quantum vector
+\newcommand {\uq}[1]        {\langle #1 \bra} % quantum conjugate vector
+\newcommand {\qs}[2]        {\langle #1 | #2 \rangle}%quantum scalar product
+\newcommand {\skipped}[1]   {\par {\Large \textbf{Лекция #1 пропущена. To be done.}}\\ \vs}
+\newcommand {\invest}[1]    {\par {\Large \textbf{Lection #1 under investigation!}}\\ \vs}
+\newcommand {\lecture}[1]   {  }
+%\newcommand {\lecture}[1]   { \par \begin{flushright}\textit{Лекция #1}\end{flushright} }
+\newcommand {\xymatrix}[4]  { \left[ \begin{array}{cc} #1 & #2 \\ #3 & #4 \end{array} \right] }
+\newcommand {\df} [2]       {\dfrac{#1}{#2}}
+\newcommand {\Sergey}[0] {}
+\newcommand {\Alex}[0]   {}
+\newcommand {\Lector}[0] {}
+%\newcommand {\Sergey}[0]    { \textit{(Прим. наборщика)} }
+%\newcommand {\Alex}[0]      { \textit{(Прим. редколлегии)} }
+%\newcommand {\Lector}[0]    { \textit{(Прим. лектора)} }
+\newcommand {\wikiq}[1]     { $^{\text{[#1]}}$ }
+\newcommand {\set}[1]       { \left\{ #1 \right\} }
+\newcommand {\qtri}[3]      {{ \uq{#1}#2\qu{#3} }}
+\newcommand {\qfive}[5]     { { \langle #1 \underset{\underset{#2}{\uparrow}}{|} #3 \underset{\underset{#4}{\uparrow}}{|} #5 \rangle } }
+\newcommand {\pois}[2]      { { \big\{ #1, \, #2 \big\} } }
+\newcommand {\qpois}[2]     { { \big\{ #1, \, #2 \big\} }_{\text{qu}} }
+\newcommand {\Pois}[2]      { { \Big\{ #1, \, #2 \Big\} } }
+\newcommand {\qPois}[2]     { { \Big\{ #1, \, #2 \Big\} }_{\text{qu}} }
+\newcommand {\comm}[2]      { { #1 #2 - #2 #1 } }
+\newcommand {\mybox}[1]     { { \underline{#1}  } }
+\newcommand {\avr}[1]       {\left\langle #1 \right\rangle}%average value
+
+\def \ssum {\mathop{\mathbf{\sum \!\!\!\!\!\!\!\!\! \sum}}}
+\def \p {\partial}
+\def \wt {\widetilde}
+%\DeclareMathOperator{\dt}{dt}
+
+\setlength{\parindent}{0ex}
+\setlength{\parskip}{1ex}
+
+\makeatother
+
+\setcounter{tocdepth}{1}
+\renewcommand\contentsname{Оглавление}
+
+%\newcommand{\frc}[2]{\raisebox{0.05em}{$#1$}\!/\raisebox{-0.05em}{$#2$}}

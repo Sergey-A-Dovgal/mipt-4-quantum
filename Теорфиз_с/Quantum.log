@@ -1,0 +1,266 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2013.3.20)  28 MAR 2013 15:17
+entering extended mode
+**Quantum.tex
+("C:\Users\СтартМастер\Google Диск\MIPT\Лекции\Теорфиз_с\Quantum.tex"
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, russian, load
+ed.
+(D:\MIKTEX\tex\latex\base\article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(D:\MIKTEX\tex\latex\base\size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\СтартМастер\Google Диск\MIPT\Лекции\Теорфиз_с\mystyle.sty"
+Package: mystyle 
+
+(D:\MIKTEX\tex\latex\amsfonts\amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(D:\MIKTEX\tex\latex\amsfonts\amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(D:\MIKTEX\tex\latex\ams\math\amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(D:\MIKTEX\tex\latex\ams\math\amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(D:\MIKTEX\tex\latex\ams\math\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen103
+))
+(D:\MIKTEX\tex\latex\ams\math\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+(D:\MIKTEX\tex\latex\ams\math\amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks16
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks17
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(D:\MIKTEX\tex\latex\base\inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks20
+\inpenc@posthook=\toks21
+ (D:\MIKTEX\tex\latex\cyrillic\cp1251.def
+File: cp1251.def 1999/11/16 v1.0d Input encoding file
+)) (D:\MIKTEX\tex\latex\base\fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(D:\MIKTEX\tex\latex\cyrillic\t2aenc.def
+File: t2aenc.def 2005/09/27 v1.0i Cyrillic encoding definition file
+)
+LaTeX Font Info:    Try loading font information for T2A+cmr on input line 100.
+
+
+(D:\MIKTEX\tex\latex\cyrillic\t2acmr.fd
+File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+))
+(D:\MIKTEX\tex\generic\babel\babel.sty
+Package: babel 2008/07/06 v3.8l The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(D:\MIKTEX\tex\latex\00miktex\bblopts.cfg
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+(D:\MIKTEX\tex\generic\babel\russianb.ldf
+Language: russianb 2008/03/21 v1.1r Russian support from the babel system
+
+(D:\MIKTEX\tex\generic\babel\babel.def
+File: babel.def 2008/07/06 v3.8l Babel common definitions
+\babel@savecnt=\count99
+\U@D=\dimen112
+)
+Package babel Info: Making " an active character on input line 199.
+))
+(D:\MIKTEX\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(D:\MIKTEX\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(D:\MIKTEX\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(D:\MIKTEX\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(D:\MIKTEX\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(D:\MIKTEX\tex\latex\pdftex-def\pdftex.def
+File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
+\Gread@gobject=\count100
+))
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
+)
+\c@Theorem=\count101
+\c@Corollary=\count102
+\c@Rk=\count103
+)
+("C:\Users\СтартМастер\Google Диск\MIPT\Лекции\Теорфиз_с\Quantum.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+
+(D:\MIKTEX\tex\context\base\supp-pdf.tex
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count104
+\scratchdimen=\dimen115
+\scratchbox=\box28
+\nofMPsegments=\count105
+\nofMParguments=\count106
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count107
+\MPscratchDim=\dimen116
+\MPnumerator=\count108
+\everyMPtoPDFconversion=\toks24
+) ("C:\Users\СтартМастер\Google Диск\MIPT\Лекции\Теорфиз_с\Chapter1\6.tex"
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
+
+(D:\MIKTEX\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
+ (D:\MIKTEX\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+<./pic/6/Potential-actual.PNG, id=1, 367.3725pt x 186.6975pt>
+File: ./pic/6/Potential-actual.PNG Graphic file (type png)
+
+<use ./pic/6/Potential-actual.PNG> [1{D:/MIKTEX/pdftex/config/pdftex.map}
+
+ <C:/Users/СтартМастер/Google Диск/MIPT/Лекции/Теорфиз_с/pic/6/Potential-actual
+.PNG>] [2] [3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 213.
+
+ (D:\MIKTEX\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 213.
+ [4] [5]
+<./pic/6/kronig_p.jpg, id=33, 376.40625pt x 168.63pt>
+File: ./pic/6/kronig_p.jpg Graphic file (type jpg)
+
+<use ./pic/6/kronig_p.jpg>
+<./pic/6/var_mit.png, id=34, 891.33pt x 785.93625pt>
+File: ./pic/6/var_mit.png Graphic file (type png)
+ <use ./pic/6/var_mit.png>
+[6 <C:/Users/СтартМастер/Google Диск/MIPT/Лекции/Теорфиз_с/pic/6/kronig_p.jpg> 
+<C:/Users/СтартМастер/Google Диск/MIPT/Лекции/Теорфиз_с/pic/6/var_mit.png>]
+Underfull \hbox (badness 1337) in paragraph at lines 312--314
+\T2A/cmr/m/n/12 Последнее на-зы-ва-ет-ся усло-ви-ем пол-но-го внут-рен-не-го от
+-ра-же-ния (усло-вие Брегга-
+ []
+
+<./pic/6/var_mit2.png, id=39, 632.3625pt x 758.835pt>
+File: ./pic/6/var_mit2.png Graphic file (type png)
+
+<use ./pic/6/var_mit2.png>
+LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 321
+.
+ (D:\MIKTEX\tex\latex\cyrillic\t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)) [7 <C:/Users/СтартМастер/Google Диск/MIPT/Лекции/Теорфиз_с/pic/6/var_mit2.pn
+g>]
+("C:\Users\СтартМастер\Google Диск\MIPT\Лекции\Теорфиз_с\Quantum.aux") ) 
+Here is how much of TeX's memory you used:
+ 2844 strings out of 495059
+ 32486 string characters out of 3179518
+ 88834 words of memory out of 3000000
+ 6020 multiletter control sequences out of 15000+200000
+ 15529 words of font info for 42 fonts, out of 3000000 for 9000
+ 198 hyphenation exceptions out of 8191
+ 34i,14n,26p,334b,375s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <D:\MI
+KTEX\fonts\pk\ljfour\lh\lh-t2a\dpi600\latt1200.pk> <D:\MIKTEX\fonts\pk\ljfour\l
+h\lh-t2a\dpi600\lasl1200.pk> <D:\MIKTEX\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx12
+00.pk> <D:\MIKTEX\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1728.pk> <D:\MIKTEX\font
+s\pk\ljfour\lh\lh-t2a\dpi600\lati1200.pk> <D:\MIKTEX\fonts\pk\ljfour\lh\lh-t2a\
+dpi600\larm1200.pk><D:/MIKTEX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/MIK
+TEX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/MIKTEX/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb><D:/MIKTEX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/MIKT
+EX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/MIKTEX/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><D:/MIKTEX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/MIKTEX
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Quantum.pdf (7 pages, 256608 bytes).
+PDF statistics:
+ 311 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+

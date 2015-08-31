@@ -1,0 +1,299 @@
+%\section{Общие собственные функции оператора $\Hat I^2$}
+Как было показано выше, в сферических координатах справедлива запись:
+$$
+    \begin{cases}
+        \Hat I^2 &\to -\hbar \Dta_{\theta, \phi}\\
+        \Hat I_z &\to -i \hbar \ud{}{\phi}
+    \end{cases}
+$$
+Уравнение
+$$
+    \begin{cases}
+        -\Dta_{\theta, \phi} Y(\theta, \phi) = \ell (\ell + 1) Y(\theta, \phi)\\
+        -i \ud{}{\phi} Y(\theta, \phi) = m Y(\theta, \phi)
+    \end{cases}
+$$
+ решается методом разделения переменных:
+$$
+    Y(\theta, \phi) = Y_\ell^{(m)} (\theta, \phi), \quad 0 \leqslant \theta \leqslant \pi, \quad 0 \leqslant \phi \leqslant 2\pi
+$$
+
+Если поставить условие ограниченности, получаем решение в виде сферических функций.
+$$
+    Y_\ell^{(m)} (\theta, \ell) = C_\ell^{(m)} e^{i m\phi} P_\ell^{(m)} (\cos \theta), \quad \ell = 0, 1, 2, \ldots, \quad m = 0, \pm 1, \ldots, \pm \ell
+$$
+
+$P_\ell^{(m)}$~--- присоединённый полином Лежандра.
+$$
+    P_\ell^{(m)} = (1-x^2)^{m/2} \dfrac{d^{\ell + m}}{dx^{\ell + m}} (x^2 - 1)^{\ell} \dfrac{1}{2^\ell \ell!}
+$$
+
+Известный факт: $\L_2(\R^3)$ на сфере $(r = \mathrm{const})$ образует ортогональную систему функций:
+\begingroup
+
+$$
+    \int_0^{2\pi} d\phi \int_0^\pi \sin \theta d \theta
+    Y_\ell ^{(m)\ast} Y_{\ell'}^{(m')}= \dta_{\ell \ell'}\dta_{mm'}
+$$
+
+Значит, любую функцию на единичной сфере можно разложить по единичному базису:
+$$
+    \psi(\theta, \phi) = \sum_{\ell = 0}^\infty \sum_{m = -\ell}^{\ell} A_\ell ^{m} Y_{\ell }^{(m)} (\theta, \phi)
+$$
+\Reminder Состояния со значениями квантового числа $\ell = 0, 1, 2, \ldots$ носят соответственно названия $s, \, p, \, d, \, \ldots$
+
+
+\subsection{Чётность состояния}
+В сферических координатах при замене $\vec r \to -\vec r $:
+$$
+    \begin{cases}
+        r & \to -t\\
+        \theta &\to \pi - \theta\\
+        \phi &\to \phi + \pi
+    \end{cases}
+$$
+При этом $\cos \theta \to - \cos \theta$
+
+Преобразование волновых функций:
+$$
+    \begin{cases}
+        \Phi_m (\phi + \pi) = (-1)^m \Phi_m (\phi)\\
+        \Theta_\ell^m (\pi - \theta) = (-1)^{\ell + m} \Theta_\ell ^{(m)} (\theta)
+    \end{cases}
+$$
+$$
+    \Hat I Y_\ell ^{(m)} (\theta, \phi) = (-1)^{\ell + 2m} Y(\theta, \phi),
+$$
+откуда
+$$
+    \lam = (-1)^{\ell }
+$$
+\section{Спин, или собственный механический момент частицы}
+\subsection{Гипотеза Уленбека и Гаудсмита}
+Некоторые эксперименты в атомах потребовали модификации теории (гипотеза спина, не имеет классического аналога, постулат тождественности в система со многими частицами).
+\begin{itemize}
+  \item Опыт Эйнштейна-де Гааза (1921)
+  Гиромагнитное отношение
+  $$
+    \gamma = \dfrac{\mu_z}{L_z} = \dfrac{\ell}{2mc} g
+  $$
+  где $g$~--- фактор Ланде. Для орбитального движения $g = 1$. В опыте получилось $g = 2$.
+  \item Опыт Штерна-Герлаха. Требование полуцелого квантования:
+  $$
+    2s + 1 = 2n
+  $$
+  \textbf{Гипотеза}
+  \begin{itemize}
+    \item   Электрону, наряду с орбитальным, нужно приписать также и собственный (спиновый) механический момент, не связанный с перемещением в пространстве. Его проекция на любое направление может принимать два значения
+  $$
+    \pm \dfrac{\hbar}{2} \qquad (m_s = \pm\dfrac12)
+  $$
+    \item Электрон должен обладать и собственным магнитным моментом:
+    $$
+        \pm \mu_0 = \pm \dfrac{e \hbar}{2mc},
+    $$
+    где $\mu_0$~--- магнетон Бора.
+  \end{itemize}
+  \Rem
+  \begin{itemize}
+    \item $\dfrac{\mu_z}{L_z} = \dfrac{e\hbar}{2mc} \cdot \dfrac{2}{\hbar} = \dfrac{2}{2mc} \cdot g, \qquad g = 2$
+    \item
+    $$
+        L = \hbar^2 \ell (\ell + 1), \qquad s^2 = \hbar^2 s(s+1)
+    $$
+    При $\hbar \to 0$, $s \to 0$:
+    $$
+        L^2 = \mathrm{const}
+    $$
+  \end{itemize}
+  \item Первая теория спина Паули
+\end{itemize}
+\endgroup
+
+\subsection{Теория спина Паули}
+Координатное представление в этой части невозможно, так как нарушается эрмитовость операторов.
+
+Оператор спина имеет вид:
+$$
+    \vec S = \{ \Hat S_x, \Hat S_y, \Hat S_z \}
+$$
+\textbf{Требования к оператору спина:}
+\begin{enumerate}
+  \item Эрмитовость
+  \item $[\Hat S_i, \Hat S_j] = i \hbar e_{ijk} \Hat S_k$
+  \item Операторы компонент спина коммутируют со всеми операторами, которые зависят от координат и импульса. Это происходит потому, что спин~--- внутреннее свойство. Оно должно быть измеримо \emph{независимо} по отношению к возможным перемещениями в пространстве.
+\end{enumerate}
+Отсюда следует, что оператор спина действует \emph{не в пространстве координат}, а в другом пространстве, \emph{пространстве внутренних переменных}.
+\Quest{Как это пространство можно построить?}
+Вспомни свойство оператора спина:
+\begingroup
+\def \Ssq {\vec {\Hat S}^2}
+\def \Sz {\Hat S_z}
+$$
+    \begin{cases}
+        \Ssq \qu{s, m_s} = \hbar^2 s (s+1) \qu{s, m_s}\\
+        \Sz \qu{s, m_s} = \hbar m_s \qu{s, m_s}\\
+    \end{cases}
+$$
+Мы знаем, что общая система собственных векторов оператора спина и оператора проекции образует базис некоторого пространства размерности $2s + 1$. В этом базисе матрицы, которые соответствуют этим операторам $\Ssq, \Sz$, имеют диагональный вид.
+
+Нас интересует \emph{спиновая функция} $\qs{\sigma}{s, m_s}$, где $s, m_s$~--- квантовые числа, характеристики состояний, $\sigma$~--- индекс представления.
+
+\def \X {\mathcal{X}}
+
+Если $\sigma = m_s'$, то $\X_{s, m_s} \eqdef \qs{m_s'}{s, m_s}$
+
+Эту функцию принято представлять в виде столбца:
+$$
+    \X_{s, m_s = s} = \begin{bmatrix}
+                        1 & 0 & \ldots & 0 \\
+                      \end{bmatrix}^\top
+$$
+Такие столбцы называются \emph{спиноры}. Всё пространство натянуто на эти два спинора, поэтому спиновое пространство реализуется как $\mathbb{C}_2$.
+
+\textbf{Свойства спиновых функций}
+\begin{enumerate}
+  \item
+  $
+    \qs{m'_2}{s, m_s} = \dta_{m_s' m_s},
+  $
+  $$
+    \sum_\sigma = \X_{m_s}^\ast (\sigma) \X_{m_s'}(\sigma) = \dta_{m_s m_s'}
+  $$
+  \item Полнота
+  $$
+    \sum_{m_s} \qu{m_s}\uq{m_s} = \Hat 1
+  $$
+\end{enumerate}
+Норма. Как было сказано на прошлой лекции,
+  $$
+    \|\Hat S\|_{m_s' m_s} =
+    \qtri{\frac12, m_s'}{\hat S_x}{\frac12, m_s}
+    =
+$$
+$$
+=
+    \hbar/2 \left(
+        \sqrt{s(s+1) - m_s (m_s + 1)} \dta_{m+_s' m_s + 1} + \sqrt{s(s+1) - m_s ( m_s + 1)} \dta_{m_s' m_s - 1}
+    \right) = \dfrac{\hbar}{2} \begin{bmatrix}
+                                 0 & 1  \\
+                                 1 & 0 \\
+                               \end{bmatrix}
+  $$
+Таким образом,
+\begin{itemize}
+  \item $$
+    \Hat{\vec{S}} = \dfrac{\hbar}{2} \Hat{\vec \sigma}
+  $$
+  \item
+  $$
+    \Hat \sigma_x = \begin{bmatrix}
+                      0 & 1 \\
+                      1 & 0 \\
+                    \end{bmatrix},
+                    \qquad
+    \Hat \sigma_y = \begin{bmatrix}
+                      0 & -i \\
+                      i & 0 \\
+                    \end{bmatrix}, \qquad
+    \Hat \sigma_x = \begin{bmatrix}
+                      1 & 0 \\
+                      0 & -1 \\
+                    \end{bmatrix}
+  $$
+\end{itemize}
+\Quest{Почему матрица спина двухрядная? Почему $\sigma_z$ диагональная?}
+
+\Ans
+% 1) Гипотеза
+% 2) мы работаем в таком представлении
+
+Ещё есть орбитальное пространство. При этом справедливо представление
+$$
+    \H = \H^{(orbital)} \otimes \H^{(spinal)} \cong \L_2 (\R^3) \otimes \C^{2}
+$$
+
+\subsection{Волновая функция}
+$$
+    \Psi (\vec r, \sigma) \to \Psi (\vec r, m_s)
+$$
+Рассмотрим функцию $\Psi(\vec r, t)$, в которой нет определённого значения проекции спина на ось $z$.
+
+Так как всего этих проекций может быть всего две, то в каждой пространственно-временной точке можно функцию разложить по функциям, имеющим определённое значение проекции спина.
+
+\begin{eqnarray*}
+    \Psi(\vec r, t) &=& \sum_{m_s} \Psi(\vec r, t, m_s) \X_{m_s}\\
+    &=& \underbrace{\Psi(\vec r, t, m_s = +\frac12)}_{\psi_1 (\vec r, t)} \begin{bmatrix}
+                                          1 \\
+                                          0 \\
+                                        \end{bmatrix}
+    + \underbrace{\Psi(\vec r, t, m_s = -\frac12)}_{\psi_2 (\vec r, t)} \begin{bmatrix}
+                                          0 \\
+                                          1 \\
+                                        \end{bmatrix}\\
+    &=& \begin{bmatrix}
+    \psi_1 (\vec r, t) \\
+          \psi_2 (\vec r, t) \\
+        \end{bmatrix}
+\end{eqnarray*}
+$\psi_{12}$ тоже называются \emph{спинорами}.
+
+$$
+    1 = \sum_{m_s} \int d^3 x \big|
+        \Psi(\vec r, t, m_s)
+    \big|^2 = \int d^3 x \big(
+        |\psi_1|^2 + |\psi_2|^2
+    \big) = 1
+$$
+
+Из вида нормировочного условия следует смысл верхней и нижней компоненты.
+
+$$
+    \begin{cases}
+        \psi_1^\ast(\vec r, t) \psi_1(\vec r, t) =  W(\vec r, t, \uparrow) d^3 x\\
+        \psi_2^\ast(\vec r, t) \psi_2(\vec r, t) =  W(\vec r, t, \downarrow) d^3 x
+    \end{cases}
+$$
+
+\begin{itemize}
+  \item $\psi_1^\ast\psi_1$~--- вероятность обнаружить частицу в момент времени $t$ в объёме $\vec r, \vec r + d \vec r$ на ось $z$, равной $\hbar/2$.
+
+  \item $\psi_2^\ast\psi_2$~--- вероятность обнаружить частицу в момент времени $t$ в объёме $\vec r, \vec r + d \vec r$ на ось $z$, равной $-\hbar/2$.
+
+\end{itemize}
+
+\endgroup
+
+\textbf{Альтернативный способ записи нормировочного условия}
+Сопряжённый вектор:
+$$
+    \Psi^+ (\vec r, t) = (\psi_1^\ast, \psi_2^\ast)
+$$
+$$
+    \int d^3 x \Psi^+ \Psi = \int d^3 x \left(
+        w(\vec r, t, \uparrow) + w(\vec r, t, \downarrow)
+    \right) = 1
+$$
+С помощью этого аппарата можно пользоваться матричным представлением.
+
+Берём единичные операторы из полного пространств состояний (орбитального и спинового)
+\begin{eqnarray*}
+    \qfive{\Psi_A}{\Hat 1}{\Hat F}{\Hat 1}{\Psi_B} &=&
+    \sum_{m_s m_s'} \int d^2 x d^3 x' \qs{\Psi_A}{\vec r, m_s}
+    \underbrace{\qtri{\vec r, m_s}{\Hat F}{\vec r', m_s'}}_{\text{матрица $2s+1 \times 2s+1$}}
+    \qs{\vec r' m_s'}{\Psi_B}
+\end{eqnarray*}
+В координатном базисе $\Hat F $ сводится к некоторому оператору $\F \dta(\vec r - \vec r')$ (дельта-функция трёхмерная). Эта функция помогает снять один из интегралов:
+\begin{eqnarray*}
+    &=& \sum_{m_s m_s'} \int d^3 x
+    \underbrace{\qs{\Psi_A}{\vec r, m_s}}_{\text{сопряженный спинор}}
+    \underbrace{\qtri{m_s}{\Hat\F}{m_s'}}_{\text{matrix $2 \times 2$}}
+    \underbrace{\qs{\vec r, m_s}{\Psi_B}}_{\text{спинор}}\\
+    &=&\int d^3 x \Psi_A^+ \Hat \F \Psi_B\\
+    &=& \qtri{\Psi_A}{\Hat F}{\Psi_B}
+\end{eqnarray*}
+
+Оператор магнитного момента:
+$$
+    \Hat{\vec \mu} = \mu_0 \Hat \sigma = \dfrac{e \hbar}{2mc} \Hat{\vec \sigma} = \gamma \Hat{\vec S}
+$$ 
