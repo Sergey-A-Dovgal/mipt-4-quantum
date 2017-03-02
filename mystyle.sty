@@ -8,6 +8,14 @@
 \usepackage{graphicx}
 \usepackage{units}
 
+% TikZ-related packages
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{calc}
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+
 \usepackage{fancyhdr}
 
 \renewcommand{\headrulewidth}{0.4pt}

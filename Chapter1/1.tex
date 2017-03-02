@@ -76,9 +76,39 @@ $$
 $$
 \Psi (x, t ) = \int_{k_0-\Delta k}^{k_0+\Delta k} A(k)e^{-i(\omega (k)t-kx)}dk
 $$
-\begin{figure}[h]
-\center{\includegraphics[width=0.6\textwidth]{pic/1/lecture.png}}
-\end{figure}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  ylabel={$\Psi(x)$},
+  ylabel style={at=(current axis.right of origin),rotate=-90, anchor=north},
+  ylabel shift = 5 cm,  
+  samples=100,
+  axis y line  = center,
+  axis x line  = bottom,
+  axis lines*=center,
+  xtick={0}, 
+  xticklabels={$0$},
+  ytick=\empty,
+  axis on top,
+  xlabel={$x$},
+  x label style={at={(axis description cs:1,0.1)}},
+  xmax=8,
+  xmin=-8,
+  ymax = 0.22,
+  ymin=0
+  ]
+  \addplot [draw=black, domain=-8:8] {gauss(0,2)} \closedcycle;
+  \draw[->] (axis cs:0, 0.1) -- (axis cs:3, 0.1) node [above]
+     {$\vec{v_{\text{гр}}}$};
+  \draw[<->] (axis cs:-3.1, 0.06) -- (axis cs:3.1, 0.06) node [above,midway,text width=2cm] {$\Delta x$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+%\begin{figure}[h]
+%\center{\includegraphics[width=0.6\textwidth]{pic/1/lecture.png}}
+%\end{figure}
+
 $\vec{v_{\text{гр}}}$ -- скорость центра масс волнового пакета\index{Групповая скорость}\\
 $$
 \Delta k\Delta x \ge 1
