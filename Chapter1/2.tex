@@ -65,7 +65,18 @@ $$
     \item После поляроида: $\vec E_{\|} \exp(-i\omega t)$
     \item $\dfrac{I_{pass}}{I_{fall}} = \dfrac{|\vec E_{\|}|^2}{|\vec E|^2} = \cos^2 \theta$
   \end{itemize}
-  \Picw{pic/1/2.pdf}{0.3}
+%  \Picw{pic/1/2.pdf}{0.3}
+\begin{center}
+\begin{tikzpicture}
+\draw[-latex,thick] (0,0) -- (0, 5) node [above] {Ось поляроида};
+\draw[-latex,thick] (0,0) -- (0, 2.5) node [left] {$\vec E_{\|}$};
+\draw[-latex,thick] (0,0) -- (5, 0);
+\draw[-latex,thick] (0,0) -- (3, 0) node [below] {$\vec E_{\perp}$};
+\draw[-latex,thick] (0,0) -- (3, 2.5) node [above] {$\vec E$};
+\draw[dashed] (0,2.5) -- (3,2.5);
+\draw[dashed] (3,0) -- (3,2.5);
+\end{tikzpicture}
+\end{center}
 
   При этом интенсивность пропорциональна количеству падающих фотонов,
   $$
