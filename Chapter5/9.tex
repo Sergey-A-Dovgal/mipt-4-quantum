@@ -1,7 +1,8 @@
 \chapter{Теория углового момента}
 \section{Каноническое квантование}
 \index{Квантование!каноническое}
-Каноническое квантование~--- это квантование при помощи коммутационных соотношений
+Каноническое квантование~--- это квантование при помощи коммутационных соотношений.
+
 \subsection{Коммутационные соотношения}
 \Reminder В классической механике есть \emph{орбитальный момент}, или \emph{момент количества движения}
 \index{Момент количества движения!квантовый}
@@ -98,9 +99,10 @@ $$
 Можно построить собственные векторы, отвечающие собственным значениям $\mu \pm 1$, и так далее.
 
 \textbf{Вывод:}
-$$
-    \jpm \qlm = N_\pm \qu{\lam, \, \mu \pm 1} \eqno (\ast)
-$$
+\begin{equation}
+    \jpm \qlm = N_\pm \qu{\lam, \, \mu \pm 1}
+    \label{eq::eigenvec_j_pm}
+\end{equation}
 Хотим показать, что спектр оператора $\jz$ является ограниченным (см. главу 4)
 
   \item %\subsection[Спектр проекции $\Hat{j_z}$]{Спектр оператора $\jz$}
@@ -131,7 +133,7 @@ $$
         \jm \qu{\lam, \mu_{\min}} = 0
     \end{cases}
 $$
-Для того, чтобы реализовать эти условия, надо найти $N_\pm$. Воспользуемся $(\ast)$.
+Для того, чтобы реализовать эти условия, надо найти $N_\pm$. Воспользуемся~\eqref{eq::eigenvec_j_pm}.
 
   \item %\subsection{Оператор $N_\pm$}
 \def \jmp {\Hat j_\mp}
@@ -245,7 +247,7 @@ $$
 \section{Орбитальный момент количества движения}
 \subsection{}
 Были написаны две возможности для того, чтобы реализовать принцип соответствия. Вернёмся к первому способу.
-Заменим $\vec p$, $\vec r$ не операторы.
+Заменим $\vec p$, $\vec r$ на операторы.
 \begingroup
 \def \nla {\nabla}
 \def \hvr {\hat{\vec r}}
@@ -262,10 +264,10 @@ $$
         x &= r \cos \phi \sin \theta \\
         y &= r \sin \phi \sin \theta \\
         z &= r \cos \phi
-    \end{cases}, \, where \,
+    \end{cases}, \, \text{где} \,
     \begin{cases}
-        0 &\leqslant \phi \leqslant 2\pi\\
-        0 &\leqslant \theta \leqslant \pi
+        0 \leqslant \phi \leqslant 2\pi&\\
+        0 \leqslant \theta \leqslant \pi&
     \end{cases}
 $$
 $$
@@ -276,7 +278,7 @@ $$
 $$
     \ud{}{\phi} = \ud{}{x} \ud{x}{\phi} + \ud{}{y} \ud{y}{\phi} + \ud{}{z} \ud{z}{\phi}
 $$
-Поставим вопрос о собственных функциях оператора $L_z$
+Поставим вопрос о собственных функциях оператора $L_z$.
 
 \subsection{}
 
@@ -297,7 +299,7 @@ $$
 
 Система будет нормирована:
 $$
-    \int_0^{2\pi} \Phi_m^\ast (\phi) \Phi_{m'} (\phi) d \phi = \dta_{mm'}
+    \int\limits_0^{2\pi} \Phi_m^\ast (\phi) \Phi_{m'} (\phi) d \phi = \dta_{mm'}
 $$
 Отсюда
 $$
@@ -311,9 +313,9 @@ $$
 \subsection{}
 $$
     \hvL^2 = -\hbar^2 \left(
-        \dfrac{1}{\sin \theta} \ud{}{\theta} \big(
+        \dfrac{1}{\sin \theta} \ud{}{\theta} \left(
             \sin \theta \ud{}{\theta}
-        \big) +
+        \right) +
         \dfrac{1}{\sin \theta} \left(\ud{}{\phi}\right)^2
     \right) = -\hbar^2 \Delta_{\theta, \phi}
 $$
