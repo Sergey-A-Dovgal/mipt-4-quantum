@@ -24,7 +24,34 @@ $$
 \begin{itemize}
   \item \textbf{Опыт 1. Интерференция электронов, опыт Юнга.}
 
-  \Picw{pic/1/1.pdf}{0.4}
+%  \Picw{pic/1/1.pdf}{0.4}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  axis lines=none,% 
+%  domain=0.125:1000,
+  xmin=-10, xmax=9,
+  ymin=-12, ymax=12,
+  samples=400
+]
+\pgftransformrotate{-90}
+\addplot [draw=black, domain=-10:9] {10*gauss(1.5,1)} \closedcycle;
+\addplot [draw=black, domain=-10:9] {10*gauss(-2.5,1)};
+\addplot+[mark=none, black, domain=-7:6] {6.5 + cos(4.9 * (deg(x) - 1.5))};
+\node[rotate=90] at (axis cs: 5,3) {$W_2(x)$};
+\node[rotate=90] at (axis cs: -6,3) {$W_1(x)$};
+\node[rotate=90] at (axis cs: 0,9.5) {$W(x)$};
+\addplot[mark=none,black] coordinates {(1.5,-10) (1.5,4.5)};
+\addplot[mark=none,black] coordinates {(-2.5,-10) (-2.5,4.5)};
+\addplot[mark=none,black] coordinates {(-10,-9) (-3,-9)};
+\addplot[mark=none,black] coordinates {(-2,-9) (1,-9)};
+\addplot[mark=none,black] coordinates {(2,-9) (9,-9)};
+\draw[latex-latex] (axis cs: -2.5,-10) -- (axis cs: 1.5,-10) node [left, midway, align=center,rotate=90] {$d$};
+\draw[latex-latex] (axis cs: 7,-9) -- (axis cs: 7,0) node [above, midway, align=center,rotate=90] {$L$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
   Реализация \index{Опыт Юнга}
   \begin{enumerate}
     \item Открыта щель 1, закрыта щель 2. $W_1(x)$
@@ -65,7 +92,18 @@ $$
     \item После поляроида: $\vec E_{\|} \exp(-i\omega t)$
     \item $\dfrac{I_{pass}}{I_{fall}} = \dfrac{|\vec E_{\|}|^2}{|\vec E|^2} = \cos^2 \theta$
   \end{itemize}
-  \Picw{pic/1/2.pdf}{0.3}
+%  \Picw{pic/1/2.pdf}{0.3}
+\begin{center}
+\begin{tikzpicture}
+\draw[-latex,thick] (0,0) -- (0, 5) node [above] {Ось поляроида};
+\draw[-latex,thick] (0,0) -- (0, 2.5) node [left] {$\vec E_{\|}$};
+\draw[-latex,thick] (0,0) -- (5, 0);
+\draw[-latex,thick] (0,0) -- (3, 0) node [below] {$\vec E_{\perp}$};
+\draw[-latex,thick] (0,0) -- (3, 2.5) node [above] {$\vec E$};
+\draw[dashed] (0,2.5) -- (3,2.5);
+\draw[dashed] (3,0) -- (3,2.5);
+\end{tikzpicture}
+\end{center}
 
   При этом интенсивность пропорциональна количеству падающих фотонов,
   $$
