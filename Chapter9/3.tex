@@ -148,7 +148,31 @@ $$
 %\ast
 \subsection{Адиабатическое и внезапное включение возмущения}
 \textbf{Первый случай.}
-\centerline{\includegraphics[width=0.6\textwidth]{pic/9/v.pdf}}
+%\centerline{\includegraphics[width=0.6\textwidth]{pic/9/v.pdf}}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[width=6in,axis equal image,
+    axis lines=middle,
+    xmin=-0.1,xmax=3,samples=201,
+    xlabel=$t$,ylabel=$V(t)$,
+    ymin=-0.1,ymax=1.5,
+    enlargelimits={abs=1cm},
+    axis line style={-latex},
+    ticklabel style={font=\small,fill=white},
+    xtick={\empty},ytick={\empty},
+    extra x ticks={3},
+	extra x tick style={xticklabel=$T$}
+    ]
+\addplot+[no marks, thick, black, rounded corners=1ex] coordinates {(0,0)  (0.1, 0) (0.2,0.5) (0.3, 1) (2.9, 1) (3,0.5) (3.1, 0) (4, 0)};
+\addplot+[dashed, no marks, black] coordinates {(0.05,-1) (0.05,1.5)};
+\addplot+[dashed, no marks, black] coordinates {(0.31,-1) (0.31,1.5)};
+\addplot[latex-latex, no marks, black] coordinates {(0.05, 1.3) (0.31, 1.3)} node[above, midway] {$\tau$};
+\addplot+[dashed, no marks, black] coordinates {(2.88,-1) (2.88,1.5)};
+\addplot+[dashed, no marks, black] coordinates {(3.13,-1) (3.13,1.5)};
+\addplot[latex-latex, no marks, black] coordinates {(2.88, 1.3) (3.13, 1.3)} node[above, midway] {$\tau$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
 $$
     C_{nm} (t) = \underbrace{\left.\dfrac{V_{mn} (t')}{i\hbar} \dfrac{e^{i \omega_{mn} t'}}{i \omega_mn} \right|_{0}^{t}}_{=0} +
 \dfrac{1}{\hbar \omega_{mn}} \int_0^T \dfrac{d V_{mn} (t')}{dt'} e^{i \omega_{mn} t'} dt'
