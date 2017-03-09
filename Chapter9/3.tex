@@ -216,7 +216,35 @@ $$
 $$
     f(\omega, T) = \dfrac{2}{\omega^2} \big( 1 - \cos(\omega T) \big)
 $$
-\centerline{\includegraphics[width=0.6\textwidth]{pic/9/fwt.pdf}}
+
+%\centerline{\includegraphics[width=0.6\textwidth]{pic/9/fwt.pdf}}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[width=6in,axis equal image,
+    axis lines=middle,
+    xmin=-8,xmax=8,samples=400,
+    xlabel=$\omega$,ylabel={$f(\omega, T)|_{T=2}$},
+    unbounded coords=jump,
+    ymin=0,ymax=4.5,
+    enlargelimits={abs=1cm},
+    %enlargelimits=false,
+    axis line style={-latex},
+    ticklabel style={font=\small,fill=white},
+    xtick={0, 3.14159,-3.14159, 6.28318, -6.28318},
+    ytick={4},
+    xticklabels={$0$, $\frac{2\pi}{T}$, $-\frac{2\pi}{T}$, $\frac{4\pi}{T}$, $-\frac{4\pi}{T}$},
+    yticklabel={$T^2$},
+    restrict y to domain=-4:4
+%   extra x ticks={3},
+%	extra x tick style={xticklabel=$T$}
+	]
+\addplot[black,no marks,domain=1e-1:10] {(1 - cos(2*deg(x))) * 2 / x^2};
+\addplot[black,no marks,domain=-10:-1e-1] {(1 - cos(2*deg(x))) * 2 / x^2};
+\addplot[black,no marks,domain=-1e-1:1e-1] {4 - 4*x^2 / 3};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
 $$
     \int_{-\infty}^{+\infty} f(\omega, T) d\omega = 2 \pi T = \textrm{const}
 $$
