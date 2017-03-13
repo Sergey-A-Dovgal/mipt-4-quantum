@@ -11,7 +11,7 @@
 $$
     \Hat x \qu{x'} = x' \qu{x'}
 $$
-\Rem Декартова система имеет преобладающее значение, хотя иногда встречается и сферическая с.к, и другие.
+\Rem Декартова система имеет преобладающее значение, хотя иногда встречается и сферическая система координат и другие.
 
 Когда речь идёт об абстрактном гильбертовом пространстве, то элементы $p_i, q_j$ являются элементами каких-то абстрактных алгебр с операцией $[p_i, q_j]$, $[p_i, p_j]$, $[q_i, q_j]$. Представление канонических коммутационных соотношений: переход к эрмитовым операторам.\index{Оператор! эрмитов (симметричный)}
 
@@ -32,7 +32,7 @@ $$
 
 Спектр оператора $\Hat x$ непрерывен и заполняет всю вещественную ось.
 
-\Proof Введём оператор $\Hat T_a \eqdef \exp(\frac{i}{\hbar} a \Hat p),$ $\mathrm{Im} \, a = 0$
+\Proof Введём оператор $\Hat T_a \eqdef \exp\left(\frac{i}{\hbar} a \Hat p\right),$ $\mathrm{Im} \, a = 0$
 
 Можно заметить, что
 $$
@@ -46,7 +46,7 @@ $$
 $$
     \Hat x\Hat T_a \qu{x'} = \Hat T_a (\Hat x - a) \qu{x'} = (x' - a) \Hat T_a \qu{x'}
 $$
-Получили новый собственный вектор (ненулевой в силу существования обратного оператора), соотсвтетсвющий собственному значению $(x'-a)$.
+Получили новый собственный вектор (ненулевой в силу существования обратного оператора), соответствующий собственному значению $(x'-a)$.
 
 Норма вектора:
 $$
@@ -100,7 +100,7 @@ $$
     &= \int_{-\infty}^{+\infty}  \big|\psi(x)^2\big|^2 dx
 \end{eqnarray*}
 
-Таким образом, пространство $\H$ реализовано в виде пространства $\mathcal{L}_2 (\R)$
+Таким образом, пространство $\H$ реализовано в виде пространства $L_2 (\R)$
 \subsection{Собственные функции оператора $\Hat x$ в координатном представлении}
 Собственные вектор $\qu{x'}$, по определению, имеет вид
 $$
@@ -121,7 +121,7 @@ $$
 $$
 \begin{eqnarray*}
     \phi(x)&=&\int_{-\infty}^{+\infty} \qtri{x}{\Hat x}{x'}\qs{x'}{\psi} dx'\\
-    &=&\int_{-\infty}^{+\infty} \underbrace{x' \dta(x - x')}_{kernel \, of \, integral \, operator} \psi(x') dx'\\
+    &=&\int_{-\infty}^{+\infty} \underbrace{x' \dta(x - x')}_{\text{ядро интегрального оператора}} \psi(x') dx'\\
     &=&x\psi(x)
 \end{eqnarray*}
 При переходе к координатному базису действие сводится к умножению на вещественное число $x$, то есть
@@ -132,7 +132,7 @@ $$
 \subsection{$U(\Hat x)$ в $x$-представлении}
 \index{Оператор! $U (\hat{x})$}
 $$
-    U(\Hat x) = \int_{-\infty}^{+\infty} U(x') \qu{x'} \uq{x'} dx'
+    U(\Hat x) = \int\limits_{-\infty}^{+\infty} U(x') \qu{x'} \uq{x'} dx'
 $$
 $$
     U(\Hat x) \qu{\psi} = \qu{\phi}
@@ -143,14 +143,14 @@ $$
 $$
 \textbf{Правила работы с $\dta$-функциями.}
 \begin{eqnarray}
-    \int_{-\infty}^{+\infty} f(x) \dta(x - x_0) dx &=& f(x_0)\\
-    \dfrac{1}{2\pi} \int_{-\infty}^{+\infty} e^{ikx} dk &=& \dta(x) \quad \text{(фурье)}\\
+    \int\limits_{-\infty}^{+\infty} f(x) \dta(x - x_0) dx &=& f(x_0)\\
+    \dfrac{1}{2\pi} \int\limits_{-\infty}^{+\infty} e^{ikx} dk &=& \dta(x) \quad \text{(фурье)}\\
     x \dta (x) = 0, \quad x \dta'(x) &=& -\dta(x)
 \end{eqnarray}
 \subsection{Оператор $\Hat p_x$ в $x$-представлении}
 \index{Оператор! импульса}
 $$
-    \int_{-\infty}^{+\infty} \qtri{x}{\Hat p_x}{x'} \qs{x'}{\psi} dx' = \qs{x} \phi
+    \int\limits_{-\infty}^{+\infty} \qtri{x}{\Hat p_x}{x'} \qs{x'}{\psi} dx' = \qs{x} \phi
 $$
 При этом
 $$
@@ -163,7 +163,7 @@ $$
 $$
     (x - x') \qtri{x}{\Hat p_x}{x'} = i\hbar \dta(x - x')
 $$
-Получили функциональное уравнение на функцию $f(x, x') = \qtri{x}{\Hat p_x}{x'}$(для класса обобщённых функций):
+Получили функциональное уравнение на функцию $f(x, x') = \qtri{x}{\Hat p_x}{x'}$ (для класса обобщённых функций):
 $$
     \underline{(x - x') \qtri{x}{\Hat p_x}{x'} = i\hbar \dta(x - x')}
 $$
@@ -173,8 +173,8 @@ $$
 $$
 Теперь можно получить \emph{матричную реализацию} этого оператора:
 \begin{eqnarray*}
-    \phi(x) &=& \int_{-\infty}^{+\infty} i \hbar \dta'(x' - x) \psi(x') dx'\\
-    &=& -i\hbar \int_{-\infty}^{+\infty} \dta(x' - x) \ud{}{x'} \psi(x') dx'\\
+    \phi(x) &=& \int\limits_{-\infty}^{+\infty} i \hbar \dta'(x' - x) \psi(x') dx'\\
+    &=& -i\hbar \int\limits_{-\infty}^{+\infty} \dta(x' - x) \ud{}{x'} \psi(x') dx'\\
     &=& -i \hbar \ud{}{x} \psi(x)
 \end{eqnarray*}
 \Rem Функция $\phi(x)$ задана неоднозначно:
@@ -191,7 +191,7 @@ $$
 \textbf{Резюме:}
 
 \begin{enumerate}
-  \item От произвольного гильбертова пространства $\H$ мы перешли к конкретному пространству $\mathcal{L}_2 (\R)$. Тогда операторам соответствуют их конкретные реализации:
+  \item От произвольного гильбертова пространства $\H$ мы перешли к конкретному пространству $L_2 (\R)$. Тогда операторам соответствуют их конкретные реализации:
       \begin{itemize}
         \item $\Hat x \to x$
         \item $\Hat p_x \to -i \hbar \ud{}{x}$
@@ -210,30 +210,30 @@ $$
   $$\index{Оператор! дифференциальный}
   
  \begin{eqnarray*}
-    \qtri{\psi}{\Hat F}{\phi} &=& \int_{-\infty}^{+\infty} dx\, dx' \, \qs{\psi}{x}
+    \qtri{\psi}{\Hat F}{\phi} &=& \int\limits_{-\infty}^{+\infty} dx\, dx' \, \qs{\psi}{x}
     \qtri{x}{\Hat F}{x'} \qs{x'}{\phi} dx'\\
-    &=& \int_{-\infty}^{+\infty} dx dx' \psi^\ast(x) \Hat \F \dta (x - x') \phi(x') \\
-    &=& \int_{-\infty}^{+\infty} dx \psi^\ast (x) \Hat \F \phi(x)
+    &=& \int\limits_{-\infty}^{+\infty} dx dx' \psi^\ast(x) \Hat \F \dta (x - x') \phi(x') \\
+    &=& \int\limits_{-\infty}^{+\infty} dx \psi^\ast (x) \Hat \F \phi(x)
  \end{eqnarray*}
  \item Соотношение неопределённостей.\index{Соотношение неопределенностей}
  $$
     \left[ -i\hbar \ud{}{x}, \, x \right] = \ldots = -i\hbar \Hat 1
  $$
- Можно поступить наоброт, введя операторы, и из конкретного вида получив коммутационные соотношения.
+ Можно поступить наоброт: ввести операторы, и из их конкретного вида получить коммутационные соотношения.
  \item Уравнение Шрёдингера в координатном представлении:\index{Уравнение Шредингера! в координатном представлении}
  $$
-    i\hbar \ud{}{t} \qu{\psi(t)} = \Hat H \qu{\psi(t)}, \quad \Hat H = \dfrac{\Hat{p_x^2}}{2m} + \Hat U(x)
+    i\hbar \ud{}{t} \qu{\psi(t)} = \Hat H \qu{\psi(t)}, \quad \Hat H = \dfrac{\Hat{p}_x^2}{2m} + \Hat U(x)
  $$
  $$
     \underline{
-        i\hbar \ud{}{t} \Psi(x, t) = \left( - \dfrac{\hbar^2}{2m} \big(\ud{}{x}\big)^2 + U(x) \right) \Psi(x, t)
+        i\hbar \ud{}{t} \Psi(x, t) = \left( - \dfrac{\hbar^2}{2m} \left(\ud{}{x}\right)^2 + U(x) \right) \Psi(x, t)
     }
  $$
 \end{enumerate}
-\subsection{Собственные функции оператора $\Hat{p_x}$ в $x$-представлении.}
+\subsection{Собственные функции оператора $\Hat{p}_x$ в $x$-представлении.}
 %
 $$
-    \Hat {p_x} \qu{p'}  = p' \qu{p'} \quad \to \quad \qs{x}{p} = \psi_p (x)
+    \Hat {p}_x \qu{p'}  = p' \qu{p'} \quad \to \quad \qs{x}{p} = \psi_p (x)
 $$
 \Rem индекс $p$ означает, что это собственная фукнкция оператора импульса
 
@@ -242,16 +242,16 @@ $$
     -i\hbar \ud{}{x} \psi_p (x) = p \psi_p(x),
 $$
 $$
-    \underline{\psi_p(x) = C \exp(\dfrac{ipx}{\hbar})}, \quad |\psi_p ( \pm \infty)|< \infty
+    \underline{\psi_p(x) = C \exp\left( \dfrac{ipx}{\hbar}\right)}, \quad |\psi_p ( \pm \infty)|< \infty
 $$
 \Proof
 $$
     \underbrace{\qs{p}{p'}}_{\qtri{p}{\Hat 1}{p'}} = \dta(p - p') 
 $$
 \begin{eqnarray*}
-    &\int_{-\infty}^{+\infty} dx \qs px \qs x {p'}\\
-    &= \int_{-\infty}^{+\infty} \psi^\ast_p(x) \psi_{p'} (x) dx\\
-    &= C^2 \int_{-\infty}^{+\infty} \exp\left( \dfrac{-i \hbar (p-p')}{\hbar} \right) dx\\
+    &\int\limits_{-\infty}^{+\infty} dx \qs px \qs x {p'}\\
+    &= \int\limits_{-\infty}^{+\infty} \psi^\ast_p(x) \psi_{p'} (x) dx\\
+    &= C^2 \int\limits_{-\infty}^{+\infty} \exp\left( \dfrac{-i \hbar (p-p')}{\hbar} \right) dx\\
     &= C^2 2\pi \hbar \dta(p-p')
     &= \dta(p-p')
 \end{eqnarray*}
@@ -274,11 +274,11 @@ $$
     \qs p{p'} = \dta(p - p')
 $$
 $$
-    \int_{-\infty}^{+\infty} \qu p \uq p dp = \Hat 1
+    \int\limits_{-\infty}^{+\infty} \qu p \uq p dp = \Hat 1
 $$
 \subsection{Волновая функция}
 $$
-    \qu \psi = \int_{-\infty}^{+\infty} \qu p \qs p \psi  dp \to
+    \qu \psi = \int\limits_{-\infty}^{+\infty} \qu p \qs p \psi  dp \to
 $$
 $$
     \Phi(p) = \qs p \psi, \qquad |\Phi(p)|^2 dp = W(p) dp

@@ -34,9 +34,9 @@ $$
 $$
 \subsection{Гамильтониан}
 $$
-    H_{classical} = \dfrac{\vec p^2}{2m} + U(r) = \dfrac{p_{r}^2}{2m} + \dfrac{\vec L^2}{2m_{r}} + U(r)
+    H_{\mathrm{classical}} = \dfrac{\vec p^2}{2m} + U(r) = \dfrac{p_{r}^2}{2m} + \dfrac{\vec L^2}{2m_{r}} + U(r)
 $$
-Переход к квантовым величинам происходит с помощью расстановки крышечек.
+Переход к квантовым величинам происходит с помощью расстановки <<крышечек>>.
 $$
     \Hat H = \dfrac{\Hat{\vec p}^2}{2m} + U(r) = \dfrac{\Hat{p_{r}}^2}{2m} + \dfrac{\Hat{\vec L}^2}{2m_{r}} + \Hat U(r)
 $$
@@ -65,7 +65,7 @@ $$
         \dfrac{1}{\sin \theta} \ud{}{\theta} \left(
             \sin\theta \ud{}{\theta}
         \right)
-        + \dfrac{1}{\sin^2 \theta} (\ud{}{\phi})^2
+        + \dfrac{1}{\sin^2 \theta} \left(\ud{}{\phi}\right)^2
     \right)
 \end{cases}
 $$
@@ -98,7 +98,7 @@ R(r) = E R(r)
 $$
 Надо принять к сведению, что если записать функцию в таком виде, то каждая из этих частей (угловая и радиальная) нормируется раздельно на единицу. Нормировочный интеграл записывается в виде произведения нормировочных интегралов. 
 $$
-    \underbrace{\int_{0}^\infty \underbrace{r^2 dr}_{jacobian}}_{=1} \underbrace{R^\ast R \oint d\Omega Y^\ast Y}_{=1} = 1
+    \underbrace{\int_{0}^\infty \underbrace{r^2 dr}_{\text{якобиан}}}_{=1} \underbrace{R^\ast R \oint d\Omega Y^\ast Y}_{=1} = 1
 $$
 Итак, получено уравнение
 $$
@@ -116,7 +116,7 @@ $$
 $$
 Укороченное уравнение Шрёдингера:
 $$
-    U^{eff} = U(r) + \underbrace{\dfrac{\hbar^2 \ell(\ell+1)}{2mr^2}}_{\text{потенциал отталкивания}}
+    U^{\mathrm{eff}} = U(r) + \underbrace{\dfrac{\hbar^2 \ell(\ell+1)}{2mr^2}}_{\text{потенциал отталкивания}}
 $$
 \section{Атом водорода}
 Эта задача является точно решаемой задачей.
@@ -133,7 +133,7 @@ $$
         \dfrac{d}{dr^2} + \dfrac{2}{r} \dfrac{d}{dr}
     \right\} R(r) + 
     \left\{
-        -\dfrac{ell(\ell+1)}{r^2} + \dfrac{2m}{hbar^2} \dfrac{Z e^2}{r^2} + \dfrac{2mE}{\hbar^2}
+        -\dfrac{\ell(\ell+1)}{r^2} + \dfrac{2m}{hbar^2} \dfrac{Z e^2}{r^2} + \dfrac{2mE}{\hbar^2}
     \right\} R(r) = 0
 $$
 Мы увидим, что эффективный потенциал имеет вид:
@@ -168,7 +168,7 @@ $$
 $$
     \hbar = m = e = 1
 $$
-При такой замене уравнение Шрёдингера в атомных единицах принимает вид (обезразмеривание)
+При такой замене (обезразмеривании) уравнение Шрёдингера в атомных единицах принимает вид
 $$
     \left\{
         \dfrac{d}{d\rho^2} + \dfrac{2}{\rho} \dfrac{d}{d\rho}
@@ -204,9 +204,9 @@ $$
     \end{cases},
     \to \quad R_0(\rho) = C_1 \rho^\ell + C_2 \rho^{-(\ell+1)}, \quad C_2 = 0
 $$
-Рассмотрим ещё один случай, подставляя функцию вида, где $u$~--- произвольная
+Рассмотрим ещё один случай, подставляя функцию следующего вида, где $u$~--- произвольная функция
 $$
-    R(\rho) = e^{-\kappa \rho} rho^{\ell} u(\rho)
+    R(\rho) = e^{-\kappa \rho} \rho^{\ell} u(\rho)
 $$
 $$
     \rho u'' + u' \big(
@@ -310,12 +310,13 @@ $$
 
 \textbf{Нормировка.} 
 $$
-    1 = \int_0^\infty \rho^2 d \rho R_{n, \ell} (\rho) R_{n, \ell} (\rho)
+    1 = \int\limits_0^\infty \rho^2 d \rho R_{n, \ell} (\rho) R_{n, \ell} (\rho)
 $$
 $$
     C_{n_r \ell} = \kappa ^{3/2} \sqrt{\dfrac{4}{n(n-\ell-1)! (n+2)!}}
 $$
 Решение:
+{\small
 $$
     \phi_{n \ell m} (\vec r) = \left( \underbrace{\dfrac{z}{na}}_{\kappa} \right)^{3/2}
     \sqrt{\dfrac{4}{n(n-\ell-1)! (n+\ell)!}}e^{-(rz/na)}
@@ -325,13 +326,15 @@ $$
     \right)
     \sqrt{\dfrac{2\ell+1}{4 \pi} \dfrac{(\ell-m)!}{(\ell+m)!}} e^{im\phi} P_{\ell}^{(m)} (\cos \theta)
 $$
+}
 \subsection{Вырождение}
-Квантовые числа пробегают значения
-\begin{eqnarray*}
-    n = 1, 2, 3, \ldots, \text{главное}\\
-    \ell = 0, 1, 2, \ldots, n-1 \text{орбитальное}\\
-    m = 0, \pm 1, \pm 2, \ldots, \text{магнитное}
-\end{eqnarray*}
+Квантовые числа пробегают следующие значения.
+\begin{itemize}
+\item Главное квантовое число $n = 1,2,3, \ldots$
+\item Орбитальное квантовое число $\ell = 0, 1, 2, \ldots, n-1$
+\item Магнитное квантовое число $m = 0, \pm 1, \pm 2, \ldots$
+\end{itemize}
+
 Кратность вырождения уровней энергии равна
 $$
     \sum_{\ell=0}^{n-1} (2\ell + 1) = n^2
@@ -376,7 +379,7 @@ $$
 $$
     [\Hat H, \Hat U(\phi)] = 0
 $$
-Для этого необходимо и достаточно предположить (см. выше) коммутируемость с $\Hat{\vec L}^2$, $\Hat L_i$
+Для этого необходимо и достаточно предположить (см. выше) коммутируемость с $\Hat{\vec L}^2$, $\Hat L_i$.
 
 В пространстве $E$ размерности $2 \ell + 1$ реализовано представление
 $$
@@ -398,7 +401,7 @@ $$
 $$
 Пояснение: если умножить на $\vec r$ скалярно, получим
 $$
-    (\vec \eps) = - \dfrac{\vec L^2}{z} + r
+    \vec \eps = - \dfrac{\vec L^2}{z} + r
 $$
 $$
     r = \dfrac{\vec L^2 / z}{1 - \eps^2 \cos \phi}
