@@ -61,7 +61,8 @@ $$
   $$
   Действуя слева оператором $\hat u$, не зависящим от времени, получаем:
   $$
-    \hat H(\vec r, \vec \nla) \to \Hat H' (\vec r, \vec \nla) = \hat u(\hat G) \Hat H \hat u^{-1} (\hat G) = \Hat H(\vec r, \vec \nla)
+    \hat H(\vec r, \vec \nla) \to \Hat H' (\vec r, \vec \nla) = \hat u(\hat G) \Hat H \hat u^{-1} (\hat G) = 
+    {\Hat H}({\Hat G}^{-1} \vec{r}, {\Hat G}^{-1} \vec{\nabla})
   $$
   Отсюда получается дополнительное условие на гамильтониан:
   $$
@@ -91,8 +92,11 @@ $$
 Рассмотрим инфинитезимальное преобразование, отвечающее переносу на бесконечно малый вектор $\dta \vec a$.
 $$
     \Hat U(\dta \vec a) \approx \hat 1 + i \sum_{k=1}^{3} \dta a_k \Hat F_k = \Hat 1 + i (\dta \vec a \Hat {\vec F})
-    = \hat 1 + \dfrac{i}{\hbar} (\dta \vec a \hat{\vec p})
+    \overset{\mathclap{\substack{\text{просто переобозначение}\\ \downarrow \\ \\}}}{=} 
+    \hat 1 + \dfrac{i}{\hbar} (\dta \vec a \hat{\vec p})
 $$
+(здесь $\hbar$ это не постоянная Планка, а $\vec p$~--- не импульс.)
+
 Уточним действие этого оператора в пространстве волновых функций. Функции преобразуются вот так:
 $$
     \psi'(\vec r) = \hat u (\dta \vec a) \psi(\vec r) = \psi(\hat T_{\dta \vec a}^{-1} \vec r) = \psi(\vec r + \dta \vec a)
@@ -102,7 +106,6 @@ $$
     \psi'(\vec r) \approx \big(\Hat 1 + (\dta \vec a \vec \nla) \big) \psi(\vec r)
     = \big(\hat 1 + \dfrac{i}{\hbar} (\dta \vec a \hat{\vec p}) \big) \psi(\vec r)
 $$
-Здесь $\hbar$ это не постоянная Планка, а $\vec p$~--- не импульс.
 
 Но на самом деле с точностью до константы $\hbar$,
 $$
@@ -144,7 +147,7 @@ $$
   $$
   Действительно,
   $$
-    \qtri{\psi}{\hat F}{\psi} \to \qtri{\psi}{\hat F;}{\psi} = \qtri{\psi}{\Hat U^{-1}\hat F\hat U}{\psi}
+    \qtri{\psi}{\hat F}{\psi} \to \qtri{\psi}{\hat F'}{\psi} = \qtri{\psi}{\Hat U^{-1}\hat F\hat U}{\psi}
   $$
   При преобразованиях типа 1 и 2 одинаковым образом преобразуются средние значения.
   
@@ -209,10 +212,10 @@ $$
 $$
     \psi'(t) = \hat u (\tau) \psi(t) = \psi(t + \tau)
 $$
-Рассмотрим оператор \infzh сдвигов во времени.
+Рассмотрим оператор {\infzh} сдвигов во времени.
 \begin{eqnarray*}
     \psi'(t) = \hat u(\dta \tau) \psi(t) = \psi(t + \dta \tau)\\
-    &\approx& (1 + \dta t \ud{}{t} ) \psi(t)\\
+    &\approx& (1 + \dta \tau \ud{}{t} ) \psi(t)\\
     &\approx& (1 + i \dta \tau \Hat F_t) \psi(t)
 \end{eqnarray*}
 Поэтому

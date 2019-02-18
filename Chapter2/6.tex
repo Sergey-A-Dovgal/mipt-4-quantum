@@ -157,7 +157,7 @@ $$
     \comm{\Hat x}{\Hat p_x} = i \hbar \Hat 1
 $$
 $$
-    \qtri{x}{(\comm{\Hat x}{\Hat p_x})}{x'} - i\hbar \qs{x}{x'}
+    \qtri{x}{(\comm{\Hat x}{\Hat p_x})}{x'} = i\hbar \qs{x}{x'}
 $$
 ѕодействовав первым оператором $\Hat x$ налево, вторым оператором $\Hat x$ направо, получаем:
 $$
@@ -169,7 +169,7 @@ $$
 $$
 ѕользу€сь правилом (3), получаем:
 $$
-    \underline{\qtri{x}{\Hat p_x}{x'} = i\hbar \dta(x - x')}
+    \underline{\qtri{x}{\Hat p_x}{x'} = i\hbar {\dta}'(x' - x)}
 $$
 “еперь можно получить \emph{матричную реализацию} этого оператора:
 \begin{eqnarray*}
@@ -289,3 +289,22 @@ $$
     \Hat x \to i\hbar \ud{}{p}
 \end{eqnarray*}
 „тобы проследить перемену знака, надо подставить $\Hat p$, $\Hat x$ в их коммутатор.
+
+$$
+    \Hat H = \frac{{\Hat p}^2}{2m} + U({\Hat {\vec{r}}}) \rightarrow 
+        \frac{p^2}{2m} + U(i{\hbar}\frac{\partial}{\partial p})
+$$
+$$
+    i{\hbar}\frac{\partial \qu \psi}{\partial t} = {\Hat H} \qu \psi
+$$
+$$
+    \int ih \frac{\partial}{\partial t} {\qu p} \underbrace{\qs p \psi}_{\Phi(p)} dp =
+        \int {\Hat H}{\qu p} \underbrace{\qs p \psi}_{\Phi(p)} dp
+$$
+$$
+    {\Hat r} {\qu \psi} = {\qu \phi}
+$$
+$$
+    {\qs p \phi} = \int \underbrace{{\uq p} \vec{r} {\qu p'}}_{i{\hbar}{\delta}'(p-p')\Phi(p)} 
+        {\qs p' \psi} dp'
+$$

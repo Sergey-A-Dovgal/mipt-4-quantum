@@ -34,11 +34,11 @@ $$
 $$
 \subsection{Гамильтониан}
 $$
-    H_{\mathrm{classical}} = \dfrac{\vec p^2}{2m} + U(r) = \dfrac{p_{r}^2}{2m} + \dfrac{\vec L^2}{2m_{r}} + U(r)
+    H_{\mathrm{classical}} = \dfrac{\vec p^2}{2m} + U(r) = \dfrac{p_{r}^2}{2m} + \dfrac{\vec L^2}{2mr^2} + U(r)
 $$
 Переход к квантовым величинам происходит с помощью расстановки <<крышечек>>.
 $$
-    \Hat H = \dfrac{\Hat{\vec p}^2}{2m} + U(r) = \dfrac{\Hat{p_{r}}^2}{2m} + \dfrac{\Hat{\vec L}^2}{2m_{r}} + \Hat U(r)
+    \Hat H = \dfrac{\Hat{\vec p}^2}{2m} + U(r) = \dfrac{\Hat{p_{r}}^2}{2m} + \dfrac{\Hat{\vec L}^2}{2mr^2} + \Hat U(r)
 $$
 Выбираем сферическую систему координат:
 $$
@@ -98,7 +98,7 @@ R(r) = E R(r)
 $$
 Надо принять к сведению, что если записать функцию в таком виде, то каждая из этих частей (угловая и радиальная) нормируется раздельно на единицу. Нормировочный интеграл записывается в виде произведения нормировочных интегралов. 
 $$
-    \underbrace{\int_{0}^\infty \underbrace{r^2 dr}_{\text{якобиан}}}_{=1} \underbrace{R^\ast R \oint d\Omega Y^\ast Y}_{=1} = 1
+    \underbrace{\int_{0}^\infty \underbrace{r^2 dr}_{\text{якобиан}} R^\ast R}_{=1} \oint \underbrace{d\Omega Y^\ast Y}_{=1} = 1
 $$
 Итак, получено уравнение
 $$
@@ -133,7 +133,7 @@ $$
         \dfrac{d}{dr^2} + \dfrac{2}{r} \dfrac{d}{dr}
     \right\} R(r) + 
     \left\{
-        -\dfrac{\ell(\ell+1)}{r^2} + \dfrac{2m}{hbar^2} \dfrac{Z e^2}{r^2} + \dfrac{2mE}{\hbar^2}
+        -\dfrac{\ell(\ell+1)}{r^2} + \dfrac{2m}{{\hbar}^2} \dfrac{Z e^2}{r} + \dfrac{2mE}{\hbar^2}
     \right\} R(r) = 0
 $$
 Мы увидим, что эффективный потенциал имеет вид:
@@ -174,8 +174,8 @@ $$
         \dfrac{d}{d\rho^2} + \dfrac{2}{\rho} \dfrac{d}{d\rho}
     \right\} R(\rho) +
     \left\{
-        -\dfrac{\ell(\ell+1)}{\rho^2} + \dfrac{2Z}{p}  -\kappa^2
-    \right\} R(\rho) = 0
+        -\dfrac{\ell(\ell+1)}{\rho^2} + \dfrac{2Z}{\rho}  -\kappa^2
+    \right\} R(\rho) = 0, -\kappa^2=\frac{2E}{E_a}
 $$
 %3.3
 \subsection{Ход решения уравнения}
@@ -288,7 +288,7 @@ $$
 \textbf{Уравнение на собственные функции.}
 
 $$
-    \psi_{n\ell m} (\vec r) = E_{n, \ell}  (\rho) Y_{\ell} ^{(m)} (\theta, \phi)
+    \psi_{n\ell m} (\vec r) = R_{n, \ell}  (\rho) Y_{\ell} ^{(m)} (\theta, \phi)
 $$
 $$
     R_{n, \ell} (\rho) = C_{n, \ell} e^{-\kappa \rho} \rho^{\ell} U_{n, \ell}(\rho)
@@ -332,7 +332,7 @@ $$
 \begin{itemize}
 \item Главное квантовое число $n = 1,2,3, \ldots$
 \item Орбитальное квантовое число $\ell = 0, 1, 2, \ldots, n-1$
-\item Магнитное квантовое число $m = 0, \pm 1, \pm 2, \ldots$
+\item Магнитное квантовое число $m = 0, \pm 1, \pm 2, \ldots, \pm l$
 \end{itemize}
 
 Кратность вырождения уровней энергии равна
@@ -401,10 +401,10 @@ $$
 $$
 Пояснение: если умножить на $\vec r$ скалярно, получим
 $$
-    \vec \eps = - \dfrac{\vec L^2}{z} + r
+    \vec{\eps} \vec{r} = - \dfrac{\vec L^2}{z} + r
 $$
 $$
-    r = \dfrac{\vec L^2 / z}{1 - \eps^2 \cos \phi}
+    r = \dfrac{\vec L^2 / z}{1 - \eps \cos \phi}
 $$
 Получили уравнение эллипса.
 
